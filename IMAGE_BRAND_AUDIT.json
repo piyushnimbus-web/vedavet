@@ -1,0 +1,8 @@
+{
+  "total_image_files": 32,
+  "missing_local_image_refs": [],
+  "logo": "frontend/public/images/logo.png",
+  "hero_desktop": "frontend/public/images/banner.jpeg",
+  "hero_mobile": "frontend/public/images/m.png",
+  "note": "Runtime browser tests not performed; source file checks only."
+}

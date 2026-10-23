@@ -1,0 +1,11 @@
+LOCAL WINDOWS POWERSHELL (from the extracted package directory):
+Copy-Item .env.vps.example .env
+notepad .env
+docker compose --env-file .env -f docker-compose.vps.yml config
+docker compose --env-file .env -f docker-compose.vps.yml up -d --build
+docker compose --env-file .env -f docker-compose.vps.yml ps
+docker compose --env-file .env -f docker-compose.vps.yml logs --tail=100 backend
+docker compose --env-file .env -f docker-compose.vps.yml exec backend npm run db:seed
+
+LOCAL TEST URLs: http://localhost:8080/ , http://localhost:8080/staff/ , http://localhost:8080/api/v1/health
+NOTE: Docker must be installed. Do not run db:seed against production patient data.

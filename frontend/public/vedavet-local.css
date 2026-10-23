@@ -1,0 +1,132 @@
+:root {
+  --vvblue: #07376e;
+  --vvpink: #e681a1;
+}
+.vv-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 18, 36, 0.7);
+  z-index: 99999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  padding: 6vh 16px;
+}
+.vv-modal {
+  background: white;
+  color: #19304a;
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 20px 90px #101a2999;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+.vv-modal h2 {
+  font-weight: 800;
+  color: var(--vvblue);
+  font-size: 26px;
+  margin: 0 0 18px;
+}
+.vv-modal label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.vv-modal input,
+.vv-modal select,
+.vv-modal textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #c6d2e0;
+  border-radius: 8px;
+  margin-top: 5px;
+  background: #fff;
+  color: #1b3146;
+}
+.vv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.vv-btn {
+  background: var(--vvblue);
+  color: white;
+  border: 0;
+  padding: 11px 17px;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.vv-close {
+  float: right;
+  border: 0;
+  background: #eef2f6;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.vv-message {
+  margin: 12px 0;
+  color: #174877;
+}
+.vv-shop {
+  max-width: 1100px;
+  margin: auto;
+}
+.vv-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+.vv-product {
+  border: 1px solid #e1e8f0;
+  border-radius: 12px;
+  padding: 15px;
+  background: #fff;
+}
+.vv-product img {
+  height: 130px;
+  width: 100%;
+  object-fit: contain;
+}
+.vv-toplinks {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9000;
+  display: flex;
+  gap: 8px;
+}
+.vv-toplinks a {
+  background: #07376e;
+  color: white !important;
+  border-radius: 30px;
+  padding: 10px 17px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px #0004;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .vv-grid {
+    grid-template-columns: 1fr;
+  }
+  .vv-modal {
+    padding: 17px;
+  }
+  .vv-toplinks {
+    left: 8px;
+    right: 8px;
+    justify-content: center;
+  }
+  .vv-toplinks a {
+    font-size: 12px;
+    padding: 9px 11px;
+  }
+}
+/* The fixed #mainNav lives inside #home, which is isolated; lift the whole hero layer so later sections cannot paint over the header. */
+#home.hero {
+  z-index: 1030;
+}

@@ -1,0 +1,28 @@
+databases:
+  - name: vedavet-db
+    databaseName: vedavet
+    user: vedavet
+    plan: free
+
+services:
+  - type: web
+    name: vedavet
+    runtime: node
+    plan: free
+    buildCommand: >-
+      cd frontend && npm install --include=dev && npm run build &&
+      mkdir -p dist/images && cp -R public/images/. dist/images/ && cp -R public/shop dist/shop && cp public/vedavet-local.* dist/ &&
+      cd ../backend && npm install --include=dev && npx prisma generate && npm run build
+    startCommand: cd backend && npx prisma db push && node dist/main.js
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vedavet-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        sync: false

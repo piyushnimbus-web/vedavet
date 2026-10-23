@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vedavet-local-postgres
+    environment:
+      POSTGRES_DB: vedavet
+      POSTGRES_USER: vedavet
+      POSTGRES_PASSWORD: vedavet_local
+    ports:
+      - '5432:5432'
+    volumes:
+      - vedavet_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL','pg_isready -U vedavet -d vedavet']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  vedavet_pgdata:

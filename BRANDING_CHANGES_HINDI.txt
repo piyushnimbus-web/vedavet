@@ -1,0 +1,13 @@
+VedaVet Branding + Asset Audit Patch
+
+1. Staff portal header mein actual images/logo.png logo add kiya.
+2. Staff login screen par bhi same VedaVet logo add kiya.
+3. Navy #07376E aur pink accent use kiya.
+4. Staff dashboard ke cards/buttons/mobile header styles improve kiye.
+5. Homepage original content, sections, images aur design files as-is rakhe hain.
+6. Backend APIs/database logic change nahi hui.
+7. Image references locally file-existence checked. Live URL aur browser rendering verify nahi hui.
+8. /beta/node/ routing abhi proxy rewrite aur application base-path changes maangti hai; is package ko existing PHP beta par overwrite na karein.
+9. Public web root se backend /staff logo /images/logo.png par load hota hai. Nginx ko /images serve karna hota hai.
+
+SECURITY: Demo login password bundled hai. Public client test se pehle har role ka password change karein.

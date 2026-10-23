@@ -1,0 +1,14 @@
+Module,Implementation in current code,Test to perform,Outcome
+Frontend,Existing React website included,Check desktop/mobile image paths and menus,NOT TESTED
+Authentication,JWT login and seed accounts,Login each role and test unauthorized access,NOT TESTED
+Branches,Branch CRUD routes,Create branch and test isolation,NOT TESTED
+Registry,Owner/pet and barcode additions,Register pet and fetch barcode,NOT TESTED
+Appointments,Public booking with basic conflict handling,Book and rebook same slot,NOT TESTED
+OPD/Lab/IPD/OT,Clinical handlers and generic records,Test real physician/order lifecycle,NOT VERIFIED COMPLETE
+Boarding,Kennel reservation/checkin/logs/checkout,Perform full stay and check invoice,NOT TESTED
+Inventory,Batches and movement functions,Receive/dispense/check stock across branches,NOT TESTED
+Billing,GST drafts PDFs and reconciliation endpoints,Check GST rules totals payments and PDFs,NOT VERIFIED COMPLETE
+Shop,Products/cart/unpaid orders,Update stock and order,NOT TESTED
+Owner portal,No confirmed full secure portal,Test access to own records,NOT VERIFIED COMPLETE
+Notifications,Deferred,Do not test,EXCLUDED
+Payment gateway,Deferred,Do not test,EXCLUDED

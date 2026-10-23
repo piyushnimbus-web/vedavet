@@ -1,0 +1,2591 @@
+﻿/* Vedavet Pet Hospital — navy & teal logo-matched theme. Existing class names retained. */
+
+:root {
+    --teal: #16a5bf;
+    --navy: #07376e;
+    --pale-blue: #eff9fc;
+    --ink: #102d51;
+    --muted: #657a91;
+    --r: 18px
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--ink);
+    background: #fff;
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    letter-spacing: -.02em
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem
+}
+
+.text-coral {
+    color: var(--teal)!important
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.py-section {
+    padding: 90px 0
+}
+
+.bg-cream {
+    background: var(--pale-blue)
+}
+
+.bg-dark-maroon {
+    background: var(--navy)
+}
+
+.btn-coral {
+    background: var(--teal);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: .65rem 1.2rem;
+    border: 0
+}
+
+.btn-coral:hover {
+    background: #087e9c;
+    color: #fff
+}
+
+.eyebrow {
+    display: inline-flex;
+    gap: .4rem;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: .8rem
+}
+
+.eyebrow\.light {
+    color: #9ee8f4
+}
+
+.ph {
+    /* background: #e0f3f8; */
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--r)
+}
+
+.ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ph img[src=""],
+.ph img:not([src]) {
+    display: none
+}
+
+.logo {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    margin-right: .3rem
+}
+
+.navbar-logo {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 145px;
+    }
+}
+
+
+/* hero */
+
+.hero {
+    position: relative;
+    background-color: #052251;
+    /* Webpack resolves this imported image into its generated asset URL. */
+    background-image: none;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 10px;
+    border-radius: 28px;
+    padding-bottom: 30px;
+    min-height: 620px;
+}
+
+.hero .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500
+}
+
+.hero-body {
+    padding: 140px 12px 60px;
+    max-width: 1140px
+}
+
+.hero-body h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    margin: 1rem 0
+}
+
+.hero-body p {
+    max-width: 430px;
+    font-size: 0.90rem;
+    opacity: .85;
+    margin-bottom: 1.5rem
+}
+
+.tag {
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: inline-flex;
+    gap: .4rem;
+    color: #9ee8f4
+}
+
+.hero-feats>.row>div {
+    display: flex;
+    gap: .8rem
+}
+
+.hero-feats i {
+    font-size: 1.6rem;
+    color: var(--teal)
+}
+
+.hero-feats small {
+    display: block;
+    font-size: 16px;
+    opacity: 1.1;
+}
+
+
+/* about */
+
+.badge-round {
+    position: absolute;
+    left: -14px;
+    top: 30px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 2.4rem;
+    border: 5px solid #fff;
+    animation: spin 18s linear infinite
+}
+
+.badge-round i {
+    animation: spin 18s linear infinite reverse
+}
+
+.badge-round.sm {
+    position: static;
+    width: 80px;
+    height: 80px;
+    font-size: 1.8rem;
+    flex: none;
+    animation: none
+}
+
+.badge-round.sm i {
+    animation: none
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 1rem
+}
+
+.stat i {
+    font-size: 1.6rem;
+    color: var(--teal)
+}
+
+.stat b {
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1
+}
+
+.stat small {
+    font-size: 14px;
+    color: #000000;
+}
+
+.ico-sq {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #dff6fa;
+    color: var(--teal);
+    border-radius: 10px
+}
+
+
+/* cards */
+
+.card-s {
+    background: #fff;
+    border-radius: var(--r);
+    padding: 10px;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(7, 55, 110, .07)
+}
+
+.card-s .ph {
+    aspect-ratio: 1/1;
+    border-radius: 14px
+}
+
+.card-s h6 {
+    font-size: .85rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 14px 4px 6px
+}
+
+.rating {
+    display: inline-flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: .8rem
+}
+
+.stars {
+    color: var(--teal);
+    letter-spacing: 2px
+}
+
+.stars::before {
+    content: "★★★★★"
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem 1.8rem;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.chips i {
+    color: var(--teal)
+}
+
+.pill {
+    background: var(--teal);
+    color: #fff;
+    border-radius: 20px;
+    font-size: .65rem;
+    padding: 2px 8px;
+    margin-right: 6px
+}
+
+.prod .ph {
+    aspect-ratio: 1/1;
+    background: #eff9fc
+}
+
+.prod .stars {
+    font-size: .75rem
+}
+
+.prod .price b {
+    font-size: .95rem
+}
+
+.prod .price s {
+    font-size: .7rem;
+    color: #8295a8;
+    margin-left: 6px
+}
+
+
+/* what we do */
+
+.float-card {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 12px 16px;
+    font-size: .8rem;
+    width: 180px
+}
+
+.avatars i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid #fff;
+    margin-right: -8px
+}
+
+.avatars i:nth-child(2) {
+    background: #1a9cba
+}
+
+.avatars i:nth-child(3) {
+    background: #166a9f
+}
+
+.float-card .avatars {
+    margin-bottom: 8px
+}
+
+.do-item {
+    display: flex;
+    gap: .8rem;
+    background: var(--pale-blue);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 12px
+}
+
+.do-item i {
+    color: var(--teal);
+    font-size: 1.5rem
+}
+
+.do-item small,
+.mini small {
+    display: block;
+    font-size: .7rem;
+    color: var(--muted)
+}
+
+.mini {
+    background: var(--pale-blue);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    min-height: 120px
+}
+
+.mini b {
+    font-size: 1.7rem;
+    color: var(--teal)
+}
+
+
+/* benefits */
+
+.ben {
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: var(--r);
+    padding: 24px 20px;
+    text-align: left;
+    height: 100%
+}
+
+.ben>i {
+    font-size: 2rem;
+    color: #9ee8f4
+}
+
+.ben h6 {
+    margin: 1rem 0 .4rem;
+    font-size: .9rem
+}
+
+.ben p {
+    font-size: .72rem;
+    opacity: .7
+}
+
+.ben ul {
+    list-style: none;
+    padding: 14px 0 0;
+    margin: 20px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    font-size: .7rem
+}
+
+.ben li {
+    margin-bottom: 6px
+}
+
+.ben li i {
+    color: var(--teal);
+    margin-right: 6px
+}
+
+
+/* plans */
+
+.plan {
+    background: var(--pale-blue);
+    border-radius: var(--r);
+    padding: 26px;
+    height: 100%;
+    border: 1px solid #cfeaf2;
+    transition: transform .2s
+}
+
+.plan:hover {
+    transform: translateY(-4px)
+}
+
+.plan>i {
+    font-size: 1.8rem;
+    color: var(--teal)
+}
+
+.plan h6 {
+    font-weight: 700;
+    margin: 1rem 0 .2rem
+}
+
+.plan .amt {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: .8rem 0
+}
+
+.plan .amt small {
+    font-size: .7rem;
+    color: var(--muted);
+    font-weight: 400
+}
+
+.plan ul {
+    list-style: none;
+    padding: 14px 0 18px;
+    margin: 0;
+    border-top: 1px solid #d4e9f2;
+    font-size: .72rem
+}
+
+.plan li {
+    margin-bottom: 8px
+}
+
+.plan li i {
+    color: var(--teal);
+    margin-right: 6px
+}
+
+
+/* testimonial */
+
+.white-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px
+}
+
+
+/* blog */
+
+.post .ph {
+    aspect-ratio: 4/3;
+    border-radius: 16px
+}
+
+.post .cat {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: #fff;
+    border-radius: 20px;
+    font-size: .65rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    z-index: 2
+}
+
+.post h6 {
+    font-size: .9rem;
+    margin: 14px 0 8px;
+    line-height: 1.4
+}
+
+.post a {
+    font-size: .75rem;
+    color: var(--ink);
+    text-decoration: none
+}
+
+.post img {
+    transition: transform .4s
+}
+
+.post:hover img {
+    transform: scale(1.05)
+}
+
+
+/* footer */
+
+footer {
+    border-radius: 28px;
+    margin: 10px
+}
+
+.f-box {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    background: rgba(255, 255, 255, .07);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 12px
+}
+
+.f-box i {
+    color: var(--teal);
+    font-size: 1.3rem
+}
+
+.f-box small {
+    display: block;
+    font-size: .65rem;
+    opacity: .7
+}
+
+.f-box b {
+    font-size: .85rem
+}
+
+.news {
+    background: rgba(255, 255, 255, .07);
+    border-radius: 12px;
+    padding: 10px
+}
+
+.news .form-control {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    box-shadow: none
+}
+
+.news .form-control::placeholder {
+    color: #c6dce9
+}
+
+.f-links li {
+    margin-bottom: 8px;
+    opacity: .8
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px
+}
+
+@media(max-width:991px) {
+    .py-section {
+        padding: 60px 0
+    }
+    .car-btn.prev {
+        left: 8px
+    }
+    .car-btn.next {
+        right: 8px
+    }
+    .badge-round {
+        left: 8px;
+        width: 90px;
+        height: 90px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none!important;
+        transition: none!important
+    }
+}
+
+
+/* fixed navbar */
+
+html {
+    scroll-behavior: smooth
+}
+
+section,
+footer {
+    scroll-margin-top: 80px
+}
+
+#mainNav {
+    padding: 18px 0;
+    transition: background .3s, padding .3s, box-shadow .3s
+}
+
+#mainNav.scrolled {
+    background: var(--navy);
+    padding: 10px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .25)
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+    color: var(--teal)
+}
+
+@media(max-width:991px) {
+    #mainNav .navbar-collapse {
+        background: var(--navy);
+        padding: 16px;
+        border-radius: 14px;
+        margin-top: 10px
+    }
+}
+
+
+/* testimonial slider */
+
+.tslide {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 4/4.8;
+    background: linear-gradient(160deg, #166a9f, #07376e)
+}
+
+.tslide>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0
+}
+
+.tslide .count {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(255, 255, 255, .9);
+    color: var(--ink);
+    font-size: .7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    z-index: 2
+}
+
+.tslide .quote {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 90px 26px 70px;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(4, 31, 70, .92) 60%);
+    font-size: .82rem;
+    line-height: 1.7
+}
+
+.tslide .quote>i {
+    font-size: 2.4rem;
+    color: var(--teal);
+    line-height: 1
+}
+
+.tslide .quote p {
+    margin: .2rem 0 1.2rem
+}
+
+.who {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 14px
+}
+
+.who .av {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--teal);
+    display: grid;
+    place-items: center;
+    font-weight: 700
+}
+
+.who .stars {
+    font-size: .7rem
+}
+
+#tcar .carousel-indicators {
+    margin: 0 0 22px;
+    gap: 6px;
+    z-index: 3
+}
+
+#tcar .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    transition: width .3s, opacity .3s
+}
+
+#tcar .carousel-indicators button.active {
+    width: 26px;
+    border-radius: 8px;
+    background: var(--teal);
+    opacity: 1
+}
+
+.car-btn {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+    transform: translateY(-50%);
+    z-index: 5;
+    transition: background .2s, color .2s
+}
+
+.car-btn:hover {
+    background: var(--teal);
+    color: #fff
+}
+
+.car-btn.prev {
+    left: -22px
+}
+
+.car-btn.next {
+    right: -22px
+}
+
+@media(max-width:991px) {
+    .car-btn.prev {
+        left: 10px
+    }
+    .car-btn.next {
+        right: 10px
+    }
+}
+
+
+/* ============================================================
+
+
+
+   VedaVet navbar — white background + dark text at all times
+
+
+
+   Applies over the hero banner, on scroll, and on mobile.
+
+
+
+   ============================================================ */
+
+#mainNav,
+#mainNav.scrolled {
+    background: #ffffff !important;
+    color: #102d51 !important;
+}
+
+#mainNav {
+    padding: 18px 0;
+    box-shadow: 0 2px 12px rgba(7, 55, 110, .06);
+}
+
+#mainNav.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 18px rgba(7, 55, 110, .12);
+}
+
+#mainNav .nav-link,
+.hero #mainNav .nav-link,
+.hero .nav-link,
+#mainNav .navbar-brand,
+#mainNav .navbar-toggler {
+    color: #102d51 !important;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active,
+.hero #mainNav .nav-link:hover,
+.hero #mainNav .nav-link.active {
+    color: #16a5bf !important;
+}
+
+#mainNav .navbar-toggler {
+    border-color: rgba(16, 45, 81, .25);
+}
+
+#mainNav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http\\://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23102d51' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991px) {
+    #mainNav .navbar-collapse {
+        background: #ffffff !important;
+        box-shadow: 0 8px 18px rgba(7, 55, 110, .10);
+    }
+    #mainNav .navbar-collapse .nav-link {
+        color: #102d51 !important;
+    }
+    #mainNav .navbar-collapse .nav-link:hover,
+    #mainNav .navbar-collapse .nav-link.active {
+        color: #16a5bf !important;
+    }
+}
+
+
+/* VedaVet pet illustration icons — add after existing rules */
+
+.vet-line-icon {
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    flex-shrink: 0
+}
+
+.ico-sq:has(.vet-line-icon) {
+    width: 64px;
+    height: 64px;
+    background: #eff9fc;
+    border-radius: 14px
+}
+
+.ico-sq .vet-line-icon {
+    width: 44px;
+    height: 44px
+}
+
+.hero-feats .vet-line-icon,
+.do-item .vet-line-icon,
+.ben .vet-line-icon,
+.stat .vet-line-icon,
+.plan .vet-line-icon {
+    width: 46px;
+    height: 46px
+}
+
+.ben .vet-line-icon {
+    filter: brightness(0) invert(1);
+    opacity: .95
+}
+
+@media(max-width:767px) {
+    .vet-line-icon {
+        width: 40px;
+        height: 40px
+    }
+    .hero-feats .vet-line-icon,
+    .do-item .vet-line-icon,
+    .ben .vet-line-icon,
+    .stat .vet-line-icon,
+    .plan .vet-line-icon {
+        width: 38px;
+        height: 38px
+    }
+}
+
+
+/* Why Choose Us image: natural 4:3 aspect, up to 1600 px wide */
+
+#why-choose-us .why-choose-image,
+#whyChooseUs .why-choose-image,
+.why-choose-us .why-choose-image,
+#why-choose-us .ph img,
+#whyChooseUs .ph img,
+.why-choose-us .ph img {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+#why-choose-us .why-image-wrap,
+#whyChooseUs .why-image-wrap,
+.why-choose-us .why-image-wrap {
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto
+}
+
+
+/* VedaVet layout refinements — 15 October */
+
+
+/* 200px side gutters for large desktop screens; fluid for laptops/mobile */
+
+@media (min-width: 1600px) {
+    .container,
+    #mainNav .container,
+    .hero-body.container {
+        width: calc(100% - 400px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .hero-body {
+        max-width: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1599.98px) {
+    .container {
+        width: calc(100% - 64px);
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* Shorter navbar in both initial and scrolled states */
+
+#mainNav,
+#mainNav.scrolled {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    min-height: 60px;
+    background: #fff !important;
+}
+
+#mainNav .navbar-logo {
+    width: 150px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+#mainNav .nav-link {
+    color: #102D51 !important;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+    color: #E94D91 !important;
+}
+
+
+/* Larger pink line icons: keep natural SVG pink strokes rather than white filters */
+
+.vet-line-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.ico-sq:has(.vet-line-icon) {
+    width: 76px;
+    height: 76px;
+    background: #FFF0F7;
+}
+
+.ico-sq .vet-line-icon {
+    width: 56px;
+    height: 56px;
+}
+
+.hero-feats .vet-line-icon,
+.do-item .vet-line-icon,
+.ben .vet-line-icon,
+.stat .vet-line-icon,
+.plan .vet-line-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.ben .vet-line-icon {
+    filter: none;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    #mainNav,
+    #mainNav.scrolled {
+        min-height: 54px;
+        padding: 5px 0 !important;
+    }
+    #mainNav .navbar-logo {
+        width: 135px;
+        max-height: 42px;
+    }
+    .vet-line-icon {
+        width: 52px;
+        height: 52px;
+    }
+    .hero-feats .vet-line-icon,
+    .do-item .vet-line-icon,
+    .ben .vet-line-icon,
+    .stat .vet-line-icon,
+    .plan .vet-line-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* VedaVet outlined illustrations: reference look with pink paw accents */
+
+.vet-pictogram {
+    width: 64px;
+    height: 64px;
+    flex: none;
+    display: inline-block;
+    overflow: visible;
+    fill: none;
+    stroke: #ff0078;
+    stroke-width: 2.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.vet-pictogram .accent {
+    stroke: #ed4c8c;
+    fill: none;
+}
+
+.hero-feats .vet-pictogram,
+.do-item .vet-pictogram,
+.ben .vet-pictogram,
+.plan .vet-pictogram {
+    width: 64px;
+    height: 64px;
+}
+
+.stat .vet-pictogram {
+    width: 52px;
+    height: 52px;
+}
+
+.ico-sq .vet-pictogram {
+    width: 32px;
+    height: 32px;
+}
+
+.ico-sq {
+    width: 48px;
+    height: 48px;
+    background: #fff1f6;
+}
+
+.bg-dark-maroon .vet-pictogram {
+    stroke: #ff0078;
+}
+
+.bg-dark-maroon .vet-pictogram .accent {
+    stroke: #ff73a8;
+}
+
+@media(max-width:767px) {
+    .hero-feats .vet-pictogram,
+    .do-item .vet-pictogram,
+    .ben .vet-pictogram,
+    .plan .vet-pictogram {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
+/* white compact navbar, dark links even when inside hero */
+
+#mainNav,
+#mainNav.scrolled {
+    background: #fff!important;
+    padding: 7px 0!important;
+    box-shadow: 0 2px 12px rgba(7, 55, 110, .08);
+}
+
+#mainNav .nav-link,
+.hero #mainNav .nav-link {
+    color: #102d51!important;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+    color: #16a5bf!important;
+}
+
+#mainNav .navbar-collapse {
+    background: #fff;
+}
+
+#mainNav .navbar-toggler {
+    border-color: #dae8ef;
+}
+
+#mainNav .navbar-toggler-icon {
+    filter: none;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: auto;
+}
+
+@media(max-width:767px) {
+    .navbar-logo {
+        width: 135px;
+    }
+}
+
+
+/* Why Choose Us: 4:3 responsive image, up to 1600px */
+
+section .ph:has(img[src="img/pets-group.png"]) {
+    width: 100%;
+    max-width: 1600px!important;
+    aspect-ratio: 4/3!important;
+    margin-inline: auto;
+}
+
+
+/* VedaVet repairs: native SVG icons and responsive hero; no icon font needed */
+
+.vet-svg-icon {
+    width: 1.15em;
+    height: 1.15em;
+    display: inline-block;
+    vertical-align: -.16em;
+    flex-shrink: 0;
+    color: inherit;
+}
+
+.hero-feats .vet-svg-icon,
+.stat .vet-svg-icon,
+.do-item .vet-svg-icon,
+.ben>.vet-svg-icon,
+.plan>.vet-svg-icon {
+    width: 60px;
+    height: 60px;
+    color: #ec5190;
+}
+
+.hero-feats>.row>div {
+    align-items: flex-start;
+}
+
+.bg-dark-maroon .ben>.vet-svg-icon {
+    color: #ec5190;
+}
+
+.ico-sq .vet-svg-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.badge-round .vet-svg-icon {
+    width: 52px;
+    height: 52px;
+}
+
+.eyebrow .vet-svg-icon,
+.tag .vet-svg-icon,
+.chips .vet-svg-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.btn .vet-svg-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.hero {
+    min-height: 650px;
+    background-color: #052251;
+}
+
+.hero-body,
+.hero-feats {
+    position: relative;
+    z-index: 1;
+}
+
+@media(max-width:767px) {
+    .hero {
+        min-height: 550px;
+    }
+    .hero-body {
+        padding-top: 105px;
+    }
+    .hero-feats .vet-svg-icon,
+    .stat .vet-svg-icon,
+    .do-item .vet-svg-icon,
+    .ben>.vet-svg-icon,
+    .plan>.vet-svg-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: 600px !important;
+    }
+}
+
+
+/* VedaVet final icon + responsive navbar refinement */
+
+:root {
+    --vet-pink: #FF0078;
+    --vet-navy: #07376E;
+}
+
+.vet-svg-icon {
+    width: 1.1em;
+    height: 1.1em;
+    display: inline-block;
+    vertical-align: -.12em;
+    flex-shrink: 0;
+}
+
+.vet-pictogram {
+    width: 62px;
+    height: 62px;
+    display: block;
+    flex: 0 0 62px;
+    fill: none;
+    stroke: var(--vet-navy);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.vet-pictogram .accent {
+    stroke: var(--vet-pink);
+    fill: none;
+}
+
+.hero-feats .vet-pictogram {
+    stroke: #fff;
+}
+
+.hero-feats .vet-pictogram .accent {
+    stroke: #ff74b4;
+}
+
+.bg-dark-maroon .vet-pictogram {
+    stroke: #fff;
+}
+
+.bg-dark-maroon .vet-pictogram .accent {
+    stroke: #ff73b4;
+}
+
+.stat .vet-pictogram,
+.ico-sq .vet-pictogram {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+}
+
+.ico-sq {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #fff0f7;
+}
+
+.ben>.vet-pictogram,
+.plan>.vet-pictogram {
+    margin-bottom: 14px;
+}
+
+.ben>.vet-pictogram {
+    stroke: #fff;
+}
+
+#mainNav,
+#mainNav.scrolled {
+    background: #fff !important;
+    min-height: 68px;
+    padding: 7px 0 !important;
+    box-shadow: 0 3px 22px rgba(7, 55, 110, .10);
+}
+
+#mainNav .navbar-logo {
+    width: 152px;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+#mainNav .nav-link {
+    color: #102d51 !important;
+    font-size: .9rem !important;
+    font-weight: 650 !important;
+    letter-spacing: 0;
+    padding: .72rem .62rem !important;
+    transition: color .2s ease;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus,
+#mainNav .nav-link.active {
+    color: #FF0078 !important;
+}
+
+#mainNav .dropdown-menu {
+    border: 1px solid #edf0f5;
+    border-radius: 14px;
+    box-shadow: 0 14px 36px rgba(7, 55, 110, .16);
+    padding: 10px;
+    min-width: 218px;
+}
+
+#mainNav .dropdown-item {
+    font-size: .88rem;
+    font-weight: 550;
+    color: #102d51;
+    padding: 10px 13px;
+    border-radius: 9px;
+    white-space: normal;
+}
+
+#mainNav .dropdown-item:hover,
+#mainNav .dropdown-item:focus {
+    background: #fff0f7;
+    color: #ca0060;
+}
+
+#mainNav .dropdown-toggle::after {
+    margin-left: .42em;
+    vertical-align: .15em;
+}
+
+#mainNav .btn-coral {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+    font-size: .86rem;
+    padding: .72rem 1rem;
+}
+
+#mainNav .container {
+    gap: 14px;
+}
+
+.hero-body h1 {
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1.13;
+}
+
+h2 {
+    font-weight: 800;
+    letter-spacing: -.025em;
+}
+
+.card-s h6,
+.ben h6,
+.plan h6 {
+    font-weight: 750;
+    line-height: 1.45;
+}
+
+.hero-feats>.row>div {
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.hero-feats b {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+}
+
+.hero-feats small {
+    line-height: 1.6;
+    font-size: .84rem;
+    opacity: .88;
+}
+
+.do-item {
+    align-items: center;
+}
+
+.do-item small,
+.stat small {
+    line-height: 1.55;
+}
+
+.eyebrow {
+    font-size: .84rem;
+    line-height: 1.4;
+    gap: 9px;
+}
+
+.tag {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.vet-svg-icon.text-coral {
+    color: #FF0078!important;
+}
+
+#why-choose-us .ph {
+    background: transparent;
+    overflow: visible;
+}
+
+#why-choose-us .ph img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media(min-width:992px) and (max-width:1199.98px) {
+    #mainNav .navbar-nav {
+        gap: 0 !important;
+    }
+    #mainNav .nav-link {
+        padding: .65rem .42rem!important;
+        font-size: .84rem!important;
+    }
+    #mainNav .navbar-logo {
+        width: 130px;
+    }
+}
+
+@media(max-width:991.98px) {
+    #mainNav,
+    #mainNav.scrolled {
+        min-height: 62px;
+    }
+    #mainNav .navbar-collapse {
+        margin-top: 10px;
+        padding: 12px !important;
+        max-height: calc(100vh - 85px);
+        overflow-y: auto;
+        background: #fff !important;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(7, 55, 110, .14);
+    }
+    #mainNav .nav-link {
+        padding: 11px 13px!important;
+    }
+    #mainNav .dropdown-menu {
+        box-shadow: none;
+        border: 0;
+        border-left: 2px solid #ffb0d4;
+        margin: 1px 8px 8px;
+        padding: 5px 7px;
+    }
+    #mainNav .btn-coral {
+        margin: 10px 12px;
+        justify-content: center;
+    }
+    .hero-body {
+        padding-top: 140px;
+    }
+    .hero-feats {
+        padding-top: 20px;
+    }
+    .hero-feats .row {
+        row-gap: 24px;
+    }
+    .vet-pictogram {
+        width: 54px;
+        height: 54px;
+        flex-basis: 54px;
+    }
+}
+
+@media(max-width:767.98px) {
+    #mainNav .navbar-logo {
+        width: 132px;
+    }
+    .hero {
+        margin: 6px;
+        border-radius: 18px;
+        min-height: 600px !important;
+        background-position: 60% center !important;
+    }
+    .hero-body {
+        padding: 122px 16px 36px;
+    }
+    .hero-body h1 {
+        font-size: clamp(2.1rem, 8vw, 3rem);
+    }
+    .hero-body p {
+        font-size: .91rem;
+        line-height: 1.7;
+        max-width: 95%;
+    }
+    .hero-feats {
+        padding: 8px 16px 25px;
+    }
+    .hero-feats .row>div {
+        gap: 12px;
+    }
+    .hero-feats .vet-pictogram {
+        width: 49px;
+        height: 49px;
+        flex-basis: 49px;
+    }
+    .hero-feats b {
+        font-size: .96rem;
+    }
+    .hero-feats small {
+        font-size: .82rem;
+    }
+    .py-section {
+        padding: 54px 0;
+    }
+    .eyebrow {
+        font-size: .8rem;
+    }
+    .tag {
+        font-size: .85rem;
+    }
+    .card-s {
+        padding: 8px;
+    }
+    .card-s h6 {
+        font-size: .83rem;
+    }
+    .chips {
+        gap: 10px;
+    }
+    .chips span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .ben,
+    .plan {
+        padding: 20px;
+    }
+    .vet-pictogram {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+    .news {
+        flex-wrap: wrap;
+    }
+    .news .form-control {
+        min-width: 160px;
+        flex: 1;
+    }
+    .news label {
+        width: 100%;
+    }
+    .tslide .quote {
+        padding: 70px 18px 58px;
+    }
+    .tslide .quote p {
+        font-size: .78rem;
+    }
+    .who .stars {
+        display: none;
+    }
+}
+
+@media(max-width:390px) {
+    .hero-body .btn {
+        margin-bottom: 12px;
+    }
+    .hero-body h1 {
+        font-size: 2rem;
+    }
+    .card-s h6 {
+        font-size: .78rem;
+    }
+}
+
+
+/* === HERO REFERENCE: screenshot-aligned text, actions and subtle reveal === */
+
+.hero .hero-reference {
+    padding-top: 142px;
+    padding-bottom: 55px;
+    max-width: none;
+}
+
+.hero .hero-reference .tag {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .035em;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+}
+
+.hero .hero-reference .hero-paw {
+    font-size: 21px;
+    color: #ef685e;
+    line-height: 1;
+}
+
+.hero .hero-reference h1 {
+    font-size: clamp(45px, 5.4vw, 76px);
+    line-height: 1.145;
+    letter-spacing: -.046em;
+    font-weight: 800;
+    max-width: 920px;
+    color: white;
+    margin: 0 0 24px;
+}
+
+.hero .hero-reference p {
+    max-width: 750px;
+    font-size: clamp(14px, 1.18vw, 17px);
+    line-height: 1.72;
+    font-weight: 600;
+    opacity: 1;
+    color: #fff;
+    margin: 0 0 37px;
+}
+
+.hero .hero-reference .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 21px;
+    background: #ff0078;
+    border-radius: 10px;
+    padding: 7px 7px 7px 24px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    min-height: 52px;
+    text-decoration: none;
+    transition: transform .25s ease, background-color .25s ease;
+}
+
+.hero .hero-reference .hero-cta:hover {
+    background: #d94e49;
+    transform: translateY(-2px);
+}
+
+.hero .hero-reference .hero-cta-arrow {
+    background: #fff;
+    width: 37px !important;
+    height: 37px !important;
+    padding: 9px;
+    border-radius: 7px;
+    color: #ff0078;
+}
+
+.hero .hero-reference .hero-watch {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+
+.hero .hero-reference .hero-play {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: #ff0078;
+    border: 6px solid rgba(255, 255, 255, .2);
+    background-clip: padding-box;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, .12);
+    transition: transform .25s ease;
+}
+
+.hero .hero-reference .hero-play svg {
+    width: 22px;
+    height: 22px;
+}
+
+.hero .hero-reference .hero-watch:hover .hero-play {
+    transform: scale(1.08);
+}
+
+@keyframes vedavetHeroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.hero .hero-reference .tag {
+    animation: vedavetHeroReveal .65s ease both;
+}
+
+.hero .hero-reference h1 {
+    animation: vedavetHeroReveal .72s ease .13s both;
+}
+
+.hero .hero-reference p {
+    animation: vedavetHeroReveal .72s ease .27s both;
+}
+
+.hero .hero-reference .hero-cta,
+.hero .hero-reference .hero-watch {
+    animation: vedavetHeroReveal .72s ease .4s both;
+}
+
+@media (max-width:991px) {
+    .hero .hero-reference {
+        padding-top: 115px;
+        padding-bottom: 45px;
+    }
+    .hero .hero-reference h1 {
+        font-size: clamp(42px, 6vw, 66px);
+    }
+}
+
+@media (max-width:767px) {
+    .hero {
+        min-height: 700px !important;
+    }
+    .hero .hero-reference {
+        padding-top: 120px;
+        padding-bottom: 45px;
+    }
+    .hero .hero-reference .tag {
+        font-size: 12px;
+    }
+    .hero .hero-reference h1 {
+        font-size: clamp(34px, 8.3vw, 52px);
+        letter-spacing: -.035em;
+    }
+    .hero .hero-reference p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 27px;
+    }
+    .hero .hero-reference .hero-cta {
+        font-size: 13px;
+        padding-left: 13px;
+        gap: 9px;
+        min-height: 49px;
+    }
+    .hero .hero-reference .hero-watch {
+        font-size: 13px;
+        margin-left: 7px;
+        gap: 8px;
+    }
+    .hero .hero-reference .hero-play {
+        width: 39px;
+        height: 39px;
+    }
+    .hero .hero-reference .hero-play svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media(max-width:440px) {
+    .hero .hero-reference .hero-watch {
+        margin: 16px 0 0 0;
+        display: flex;
+        width: max-content;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .hero .hero-reference .tag,
+    .hero .hero-reference h1,
+    .hero .hero-reference p,
+    .hero .hero-reference .hero-cta,
+    .hero .hero-reference .hero-watch {
+        animation: none !important;
+    }
+}
+
+
+/* Reference screenshot refinements - About / Why / What / Testimonials only */
+
+.reference-about,
+.reference-why,
+.reference-what {
+    background: #ffffff;
+    color: #102d51
+}
+
+.reference-about .container,
+.reference-what .container {
+    max-width: 1500px
+}
+
+.reference-about .about-main-photo .ph {
+    border-radius: 22px;
+    overflow: hidden;
+    aspect-ratio: 1/1.02
+}
+
+.reference-about .about-main-photo .ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.reference-about .about-copy h2,
+.reference-what h2 {
+    font-size: clamp(34px, 3.05vw, 52px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -.045em;
+    color: #102d51;
+    margin: 12px 0 24px
+}
+
+.reference-about .about-copy>.muted,
+.reference-what .muted {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #657a91;
+    margin-bottom: 24px
+}
+
+.reference-about .eyebrow,
+.reference-why .eyebrow,
+.reference-what .eyebrow,
+.reference-testimonials .eyebrow {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #102d51
+}
+
+.reference-about .eyebrow svg,
+.reference-why .eyebrow svg,
+.reference-what .eyebrow svg,
+.reference-testimonials .eyebrow svg {
+    color: #ff0078;
+    fill: #ff0078;
+    width: 21px;
+    height: 21px
+}
+
+.reference-about .stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px
+}
+
+.reference-about .stat svg {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    stroke: #07376e
+}
+
+.reference-about .stat svg .accent,
+.reference-what .do-item svg .accent {
+    stroke: #ff0078
+}
+
+.reference-about .stat b {
+    font-size: 36px;
+    font-weight: 800;
+    color: #07376e;
+    line-height: 1
+}
+
+.reference-about .stat small {
+    display: block;
+    color: #657a91;
+    font-size: 14px;
+    line-height: 1.55;
+    margin-top: 6px
+}
+
+.reference-about .row.g-4 .col-sm-6:last-child .ph {
+    background: #eff9fc;
+    overflow: hidden;
+    aspect-ratio: 1.6/1!important
+}
+
+.reference-about .row.g-4 .col-sm-6:last-child .ph img {
+    object-fit: contain
+}
+
+.reference-about .badge-round {
+    width: 170px;
+    height: 170px;
+    top: -25px;
+    left: -50px;
+    background: #ff0078;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    animation: none;
+    box-shadow: 0 8px 25px #00000013;
+    display: grid;
+    place-items: center;
+    text-align: center
+}
+
+.reference-about .badge-round .round-text {
+    position: absolute;
+    inset: 8px;
+    border: 1px solid #ffffffb5;
+    border-radius: 50%;
+    font-size: 15px;
+    letter-spacing: .12em;
+    font-weight: 800;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    transform: rotate(-14deg)
+}
+
+.reference-about .badge-round .badge-paw {
+    font-size: 42px;
+    position: relative
+}
+
+.reference-about .btn-coral,
+.reference-why .btn-coral {
+    background: #ff0078;
+    color: white;
+    font-weight: 700;
+    padding: 10px 14px 10px 22px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+}
+
+.reference-about .ico-sq {
+    background: #07376e;
+    color: white;
+    width: 50px;
+    height: 50px
+}
+
+.reference-about .ico-sq svg {
+    stroke: white!important;
+    width: 30px!important;
+    height: 30px!important
+}
+
+.reference-why {
+    padding-top: 75px;
+    padding-bottom: 70px
+}
+
+.reference-why h2 {
+    font-size: clamp(32px, 4.15vw, 64px);
+    font-weight: 800;
+    letter-spacing: -.05em;
+    line-height: 1.15;
+    max-width: 1190px;
+    margin: 12px auto 30px;
+    color: #102d51
+}
+
+.reference-why .accent-paw {
+    color: #ff0078;
+    font-size: .62em;
+    vertical-align: middle
+}
+
+.reference-why .why-cta-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    margin-bottom: 30px
+}
+
+.reference-why .drawn-arrow {
+    color: #ff0078;
+    font-size: 64px;
+    font-family: serif;
+    line-height: 1
+}
+
+.reference-why .right-arrow {
+    transform: rotate(10deg)
+}
+
+.reference-why .ph {
+    background: transparent;
+    border-radius: 0;
+    max-width: 1600px!important;
+    overflow: visible
+}
+
+.reference-why .ph img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+    max-height: 600px
+}
+
+.reference-why .chips {
+    gap: 12px 20px;
+    margin-top: 22px!important
+}
+
+.reference-why .chips span {
+    border: 1px solid #dcebf5;
+    border-radius: 40px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    background: white
+}
+
+.reference-why .chips svg {
+    fill: #ff0078;
+    color: #ff0078;
+    width: 18px;
+    height: 18px
+}
+
+.reference-why p.small {
+    font-size: 14px!important;
+    margin-top: 28px!important
+}
+
+.reference-what .what-photo-col>.ph {
+    aspect-ratio: 0.91!important;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+.reference-what .what-photo-col>.ph img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+.reference-what .float-card {
+    width: 240px;
+    left: 25px;
+    bottom: 25px;
+    padding: 22px;
+    border-radius: 19px;
+    background: #8d98a9b8;
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 17px;
+    box-shadow: 0 12px 30px #00000012
+}
+
+.reference-what .float-card b,
+.reference-what .float-card small {
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.35
+}
+
+.reference-what .float-card .avatars i {
+    width: 37px;
+    height: 37px;
+    background: #eaaea6
+}
+
+.reference-what .row.g-3>.col-md-7 {
+    width: 55%
+}
+
+.reference-what .row.g-3>.col-md-5 {
+    width: 45%
+}
+
+.reference-what .do-item {
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #e9e0db;
+    padding: 18px 0;
+    margin: 0;
+    display: flex;
+    gap: 17px
+}
+
+.reference-what .do-item:last-child {
+    border-bottom: 0
+}
+
+.reference-what .do-item svg {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    stroke: #07376e
+}
+
+.reference-what .do-item b {
+    display: block;
+    font-size: 18px;
+    color: #102d51;
+    margin-bottom: 7px
+}
+
+.reference-what .do-item small {
+    color: #77716d;
+    line-height: 1.6;
+    font-size: 14px
+}
+
+.reference-what .mini {
+    min-height: 148px;
+    border-radius: 22px;
+    background: #fff5e9;
+    padding: 28px 23px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.reference-what .mini b {
+    font-size: 34px;
+    color: #102d51;
+    font-weight: 800
+}
+
+.reference-what .mini small {
+    font-size: 14px;
+    color: #77716d;
+    line-height: 1.5
+}
+
+.reference-testimonials {
+    background: #fff7eb!important
+}
+
+.reference-testimonials h2 {
+    font-size: clamp(36px, 3.6vw, 58px);
+    font-weight: 800;
+    line-height: 1.12;
+    color: #102d51;
+    letter-spacing: -.05em
+}
+
+.reference-testimonials .muted {
+    color: #77716d;
+    font-size: 15.5px;
+    line-height: 1.7
+}
+
+.reference-testimonials .white-box {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: none
+}
+
+.reference-testimonials .white-box b {
+    font-size: 19px;
+    color: #102d51
+}
+
+.reference-testimonials .white-box small {
+    line-height: 1.6
+}
+
+.reference-testimonials #tcar {
+    max-width: 560px;
+    margin: 0 auto;
+    position: relative
+}
+
+.reference-testimonials #tcar::before,
+.reference-testimonials #tcar::after {
+    content: "";
+    position: absolute;
+    inset: 12px 8px;
+    transform: rotate(6deg);
+    border-radius: 25px;
+    background: #fff;
+    z-index: 0
+}
+
+.reference-testimonials #tcar::after {
+    transform: rotate(-5deg)
+}
+
+.reference-testimonials .carousel-inner {
+    position: relative;
+    z-index: 1;
+    border: 14px solid white;
+    border-radius: 26px
+}
+
+.reference-testimonials .tslide {
+    border-radius: 18px;
+    aspect-ratio: 4/5
+}
+
+.reference-testimonials .tslide .quote {
+    background: linear-gradient(transparent, rgba(52, 23, 21, .96) 74%);
+    padding: 90px 25px 55px;
+    font-size: 15px
+}
+
+.reference-testimonials .car-btn {
+    z-index: 5;
+    border-radius: 50%;
+    background: white
+}
+
+.reference-testimonials .car-btn.prev {
+    left: -55px
+}
+
+.reference-testimonials .car-btn.next {
+    right: -55px
+}
+
+@media(max-width:991px) {
+    .reference-about .badge-round {
+        width: 125px;
+        height: 125px;
+        left: -8px;
+        top: -10px
+    }
+    .reference-about .badge-round .round-text {
+        font-size: 10px
+    }
+    .reference-about .badge-round .badge-paw {
+        font-size: 30px
+    }
+    .reference-what .row.g-3>.col-md-7,
+    .reference-what .row.g-3>.col-md-5 {
+        width: 100%
+    }
+    .reference-what .mini {
+        min-height: 120px
+    }
+    .reference-testimonials .car-btn.prev {
+        left: 0
+    }
+    .reference-testimonials .car-btn.next {
+        right: 0
+    }
+}
+
+@media(max-width:767px) {
+    .reference-about,
+    .reference-what,
+    .reference-why,
+    .reference-testimonials {
+        padding-top: 55px;
+        padding-bottom: 55px
+    }
+    .reference-about .about-copy h2,
+    .reference-what h2 {
+        font-size: clamp(30px, 8vw, 42px)
+    }
+    .reference-why h2 {
+        font-size: clamp(28px, 7.1vw, 46px)
+    }
+    .reference-why .why-cta-wrap {
+        gap: 12px
+    }
+    .reference-why .drawn-arrow {
+        font-size: 27px
+    }
+    .reference-about .row.g-4 .col-sm-6:last-child {
+        margin-top: 15px
+    }
+    .reference-testimonials #tcar {
+        margin-top: 28px
+    }
+    .reference-testimonials .carousel-inner {
+        border-width: 8px
+    }
+}
+
+
+/* Brand color safeguards — only these four screenshot-matched sections */
+
+.reference-about,
+.reference-why,
+.reference-what {
+    background-color: #fff;
+    color: #102d51;
+}
+
+.reference-testimonials {
+    background-color: #eff9fc;
+    color: #102d51;
+}
+
+.reference-about h2,
+.reference-why h2,
+.reference-what h2,
+.reference-testimonials h2,
+.reference-about .stat b,
+.reference-what .mini b,
+.reference-what .do-item b,
+.reference-testimonials .white-box b {
+    color: #102d51;
+}
+
+.reference-about .eyebrow,
+.reference-why .eyebrow,
+.reference-what .eyebrow,
+.reference-testimonials .eyebrow {
+    color: #102d51;
+}
+
+.reference-about .eyebrow svg,
+.reference-why .eyebrow svg,
+.reference-what .eyebrow svg,
+.reference-testimonials .eyebrow svg,
+.reference-why .accent-paw,
+.reference-why .drawn-arrow {
+    color: #ff0078;
+}
+
+.reference-about .badge-round,
+.reference-about .btn-coral,
+.reference-why .btn-coral,
+.reference-what .pill {
+    background-color: #ff0078;
+}
+
+.reference-about .btn-coral:hover,
+.reference-why .btn-coral:hover {
+    background-color: #d90067;
+    color: #fff;
+}
+
+.reference-about .stat .vet-pictogram,
+.reference-what .do-item .vet-pictogram {
+    stroke: #07376e;
+}
+
+.reference-about .stat .vet-pictogram .accent,
+.reference-what .do-item .vet-pictogram .accent {
+    stroke: #ff0078;
+}
+
+.reference-why .chips svg {
+    color: #ff0078;
+    fill: #ff0078;
+}
+
+.reference-what .mini,
+.reference-about .about-mini-image {
+    background-color: #eff9fc;
+}
+
+.reference-testimonials .tslide .quote {
+    background: linear-gradient(transparent, rgba(5, 34, 81, .97) 80%);
+}
+
+.reference-testimonials .stars,
+.reference-testimonials .text-coral,
+.reference-why .text-coral {
+    color: #ff0078!important;
+}
+
+.reference-about .about-main-photo .ph img,
+.reference-what .what-photo-col>.ph img {
+    object-fit: cover;
+}
+
+@media(max-width:767px) {
+    .reference-about .badge-round {
+        left: 0;
+        top: -20px;
+    }
+    .reference-why .ph img {
+        max-height: none;
+        object-fit: contain;
+    }
+}
+
+
+/*******************************/
+
+
+/* Why Choose Us - Rounded Category Borders */
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.chips span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 22px;
+    border: 2px solid #07376E;
+    border-radius: 50px;
+    background: #FFFFFF;
+    color: #07376E;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.chips span svg {
+    width: 20px;
+    height: 20px;
+    color: #FF0078;
+    fill: #FF0078;
+}
+
+.chips span:hover {
+    background: #07376E;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 767px) {
+    .chips {
+        gap: 10px;
+    }
+    .chips span {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+}
+
+
+/* Contact Us Rotating Badge */
+
+.reference-about .badge-round {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #FF0078;
+    border: 7px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* Rotating Contact Us Text */
+
+.reference-about .badge-round .round-text {
+    position: absolute;
+    inset: 8px;
+    width: auto;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: contactRotate 12s linear infinite;
+}
+
+
+/* Paw Icon Fixed */
+
+.reference-about .badge-round .badge-paw {
+    position: relative;
+    z-index: 2;
+    font-size: 32px;
+    animation: none !important;
+}
+
+
+/* Continuous Rotation */
+
+@keyframes contactRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reference-about .badge-round .round-text {
+        animation: none;
+    }
+}

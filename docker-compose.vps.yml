@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vedavet
+      POSTGRES_USER: vedavet
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vedavet -d vedavet"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://vedavet:${DB_PASSWORD}@postgres:5432/vedavet?schema=public
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      PORT: '4000'
+      FRONTEND_URL: ${FRONTEND_URL:?Set FRONTEND_URL in .env}
+    depends_on:
+      postgres:
+        condition: service_healthy
+  web:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:18080:80'
+    depends_on:
+      - backend
+volumes:
+  pgdata:

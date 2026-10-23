@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>VedaVet – Pet Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <style id="vedavet-responsive-banner">
+        #home.hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background-color: #031d43;
+            min-height: 800px
+        }
+
+        #home .hero-background {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            display: block;
+            width: 100%;
+            height: 100%;
+            pointer-events: none
+        }
+
+        #home .hero-background img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50%
+        }
+
+        #home:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: linear-gradient(90deg, #031d43f2 0%, #031d43c7 31%, #031d433d 62%, #031d4300)
+        }
+
+        #home .hero-body,
+        #home .hero-feats {
+            position: relative;
+            z-index: 1
+        }
+
+        @media (width<=767.98px) {
+            #home.hero {
+                min-height: 750px
+            }
+
+            #home .hero-background img {
+                object-position: 50%100%
+            }
+
+            #home:before {
+                background: linear-gradient(#031d43f2 0%, #031d43c4 39%, #031d434d 72%, #031d430f)
+            }
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 800px;
+            background: #0000 !important
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+            overflow: hidden
+        }
+
+        .hero-background img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50%
+        }
+
+        .hero-body,
+        .hero-feats {
+            position: relative;
+            z-index: 1
+        }
+
+        @media (768px<=width<=991px) {
+            .hero {
+                min-height: 750px
+            }
+        }
+
+        @media (width<=767px) {
+            .hero {
+                min-height: 750px
+            }
+
+            .hero-background img {
+                object-fit: cover;
+                object-position: 50%
+            }
+
+            .hero-body {
+                position: relative;
+                z-index: 1
+            }
+
+            .hero {
+                position: relative;
+                min-height: 750px;
+                height: auto;
+                overflow: hidden;
+                background: none !important
+            }
+
+            .hero-background {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: 0
+            }
+
+            .hero-background img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50%100%;
+                display: block
+            }
+
+            .hero .navbar,
+            .hero-body,
+            .hero-feats {
+                position: relative;
+                z-index: 2
+            }
+
+            .hero-body {
+                padding-top: 110px
+            }
+
+            .hero {
+                position: relative;
+                min-height: 750px;
+                background: none !important;
+                overflow: hidden
+            }
+
+            .hero-background {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0
+            }
+
+            .hero-background img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50%0%
+            }
+
+            .hero-body,
+            .hero-feats {
+                position: relative;
+                z-index: 1
+            }
+
+            #home.hero {
+                position: relative !important;
+                isolation: isolate;
+                min-height: 750px;
+                overflow: hidden;
+                background: #0000 !important;
+                background-image: none !important
+            }
+
+            #home .hero-background {
+                position: absolute !important;
+                inset: 0 !important;
+                display: block !important;
+                width: 100% !important;
+                height: 100% !important;
+                overflow: hidden;
+                z-index: -1 !important
+            }
+
+            #home .hero-background img {
+                display: block !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: 50%0% !important
+            }
+
+            #home:after,
+            #home:before {
+                content: none !important
+            }
+
+            #home.hero {
+                position: relative;
+                min-height: 750px;
+                overflow: hidden;
+                background: none !important
+            }
+
+            #home .hero-background {
+                position: absolute !important;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0 !important;
+                display: block !important
+            }
+
+            #home .hero-background img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover !important;
+                object-position: 50% !important;
+                display: block
+            }
+
+            #home .hero-body,
+            #home .hero-feats {
+                position: relative;
+                z-index: 1
+            }
+
+            #home:after,
+            #home:before {
+                display: none !important
+            }
+        }
+    </style>
+    <script defer="" src="bundle.js"></script>
+    <style id="vedavet-footer-only">
+        /* VedaVet footer — scoped; no other page styles changed */
+        .vv-site-footer {
+            background: #062d5d;
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            position: relative;
+            overflow: hidden
+        }
+
+        .vv-site-footer:before {
+            content: "";
+            position: absolute;
+            right: -150px;
+            top: -230px;
+            width: 540px;
+            height: 540px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(24, 108, 170, .23), transparent 70%);
+            pointer-events: none
+        }
+
+        .vv-site-footer .vv-footer-wrap {
+            max-width: 1440px;
+            margin: auto;
+            padding: 65px 55px 0;
+            position: relative
+        }
+
+        .vv-site-footer .vv-footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr .85fr 1.12fr 1.1fr;
+            gap: 52px;
+            padding-bottom: 48px
+        }
+
+        .vv-site-footer .vv-footer-logo {
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            padding: 12px 17px;
+            border-radius: 14px;
+            margin-bottom: 21px
+        }
+
+        .vv-site-footer .vv-footer-logo img {
+            width: 185px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain
+        }
+
+        .vv-site-footer .vv-footer-brand>p {
+            max-width: 340px;
+            color: #c6daeb;
+            font-size: 14px;
+            line-height: 1.9;
+            margin: 0 0 19px
+        }
+
+        .vv-site-footer .vv-footer-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .vv-site-footer .vv-footer-pills span {
+            font-size: 11px;
+            color: #dbeeff;
+            border: 1px solid #507a9f;
+            padding: 8px 10px;
+            border-radius: 25px
+        }
+
+        .vv-site-footer .vv-footer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 13px
+        }
+
+        .vv-site-footer h3 {
+            font-weight: 800;
+            font-size: 17px;
+            color: #fff;
+            margin: 6px 0 12px;
+            line-height: 1.4
+        }
+
+        .vv-site-footer .vv-footer-column>a:not(.vv-footer-cta) {
+            color: #c6daeb;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 1.5;
+            transition: color .2s
+        }
+
+        .vv-site-footer .vv-footer-column>a:hover,
+        .vv-site-footer .vv-footer-bottom a:hover {
+            color: #ff4ca0
+        }
+
+        .vv-site-footer .vv-footer-connect p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #c6daeb;
+            margin: 0
+        }
+
+        .vv-site-footer .vv-footer-cta {
+            background: #ff0078;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-weight: 800;
+            font-size: 13px;
+            border-radius: 9px;
+            padding: 15px 19px;
+            margin: 4px 0 7px
+        }
+
+        .vv-site-footer .vv-footer-cta:hover {
+            background: #dc0068;
+            color: #fff
+        }
+
+        .vv-site-footer .vv-footer-social {
+            display: flex;
+            gap: 10px
+        }
+
+        .vv-site-footer .vv-footer-social a {
+            height: 36px;
+            width: 36px;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid #557fa3;
+            border-radius: 9px
+        }
+
+        .vv-site-footer .vv-footer-social a:hover {
+            background: #ff0078;
+            border-color: #ff0078
+        }
+
+        .vv-site-footer .vv-footer-bottom {
+            border-top: 1px solid #42678b;
+            padding: 22px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            color: #b7cfe3;
+            font-size: 12px
+        }
+
+        .vv-site-footer .vv-footer-bottom nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        .vv-site-footer .vv-footer-bottom a {
+            color: #b7cfe3;
+            text-decoration: none
+        }
+
+        @media(max-width:1100px) {
+            .vv-site-footer .vv-footer-top {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 36px
+            }
+        }
+
+        @media(max-width:640px) {
+            .vv-site-footer .vv-footer-wrap {
+                padding: 43px 22px 0
+            }
+
+            .vv-site-footer .vv-footer-top {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                column-gap: 22px;
+                row-gap: 32px;
+                padding-bottom: 36px
+            }
+
+            .vv-site-footer .vv-footer-brand,
+            .vv-site-footer .vv-footer-connect {
+                grid-column: 1/-1
+            }
+
+            .vv-site-footer .vv-footer-logo img {
+                width: 155px
+            }
+
+            .vv-site-footer h3 {
+                font-size: 15px
+            }
+
+            .vv-site-footer .vv-footer-column>a:not(.vv-footer-cta) {
+                font-size: 12px
+            }
+
+            .vv-site-footer .vv-footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                line-height: 1.8
+            }
+
+            .vv-site-footer .vv-footer-bottom nav {
+                column-gap: 16px;
+                row-gap: 6px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero" id="home">
+        <picture aria-hidden="true" class="hero-background">
+            <source media="(max-width: 767px)" srcset="images/m.png" /><img alt="" src="images/banner.jpeg" />
+        </picture>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand" href="/beta/node/"><img alt="VedaVet Pet Hospital"
+                        class="navbar-logo" src="images/logo.png" /> </a><button aria-controls="nav"
+                    aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#nav"
+                    data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item dropdown"><a aria-expanded="false" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" href="#services" id="servicesDropdown"
+                                role="button">Services</a>
+                            <ul aria-labelledby="servicesDropdown" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#services">General Checkups</a></li>
+                                <li><a class="dropdown-item" href="#services">Dental Care</a></li>
+                                <li><a class="dropdown-item" href="#services">Pet Nutrition</a></li>
+                                <li><a class="dropdown-item" href="#services">Pet Boarding</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown"><a aria-expanded="false" class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" href="#why-choose-us" id="pagesDropdown"
+                                role="button">Pages</a>
+                            <ul aria-labelledby="pagesDropdown" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#why-choose-us">Why Choose Us</a></li>
+                                <li><a class="dropdown-item" href="#products">Products</a></li>
+                                <li><a class="dropdown-item" href="#pricing">Pricing Plans</a></li>
+                                <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/beta/node/staff/">Staff Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/beta/node/shop/">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul><a class="btn btn-coral" href="#contact">Book Appointment <svg aria-hidden="true"
+                            class="vet-svg-icon" fill="none" focusable="false" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17 17 7M8 7h9v9"></path>
+                        </svg></a>
+                </div>
+            </div>
+        </nav>
+        <div class="container hero-body hero-reference"><span class="tag"><span aria-hidden="true"
+                    class="hero-paw">🐾</span> HEALTHY PETS, HAPPY HOMES.</span>
+            <h1>Expert veterinary<br />service for every<br />precious pet</h1>
+            <p>We provide comprehensive, compassionate, &amp; advanced veterinary care design to keep your pet healthy
+                at every stage of life. From preventive checkup &amp; vaccinations to diagnostics, dental care,
+                grooming, and emergency treatment.</p><a class="btn btn-coral hero-cta" href="#contact">Book An
+                Appointment <svg aria-hidden="true" class="vet-svg-icon hero-cta-arrow" fill="none" focusable="false"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                </svg> </a><a aria-label="See our pet owner testimonials" class="hero-watch" href="#testimonials"><span
+                    aria-hidden="true" class="hero-play"><svg fill="currentColor" viewbox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg></span><span>See Pet Stories</span></a>
+        </div>
+        <div class="container hero-feats">
+            <div class="row g-4">
+                <div class="col-md-4"><svg aria-hidden="true" class="vet-pictogram vet-icon-heart" fill="none"
+                        focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 56 11 36C-3 22 14 3 32 20 50 3 67 22 53 36Z"></path>
+                        <path class="accent" d="M13 34h12l5-10 7 20 5-10h9"></path>
+                    </svg>
+                    <div><b>Expert Veterinary Specialists</b> <small>Compassionate consultations and individualized
+                            medical attention for pets.</small></div>
+                </div>
+                <div class="col-md-4"><svg aria-hidden="true" class="vet-pictogram vet-icon-clipboard" fill="none"
+                        focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect height="47" rx="4" width="40" x="12" y="11"></rect>
+                        <rect height="12" rx="3" width="18" x="23" y="6"></rect>
+                        <path class="accent" d="M19 37h9l4-9 5 19 5-10h5"></path>
+                    </svg>
+                    <div><b>Advanced Diagnostic Care</b> <small>Modern diagnostic support for informed veterinary
+                            decisions.</small></div>
+                </div>
+                <div class="col-md-4"><svg aria-hidden="true" class="vet-pictogram vet-icon-shield" fill="none"
+                        focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 5 55 14v17q0 20-23 29Q9 51 9 31V14Z"></path>
+                        <path class="accent" d="m21 33 8 8 15-17"></path>
+                    </svg>
+                    <div><b>Complete Preventive Health</b> <small>Preventive checkups and guidance for long-term pet
+                            wellness.</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-section reference-about" id="about">
+        <div class="container">
+            <div class="row align-items-center g-4 g-xl-5">
+                <div class="col-lg-6 position-relative about-main-photo">
+                    <div class="ph rounded-4" style="aspect-ratio:1 / 1.02"><img alt="Veterinarian holding a cat"
+                            src="images/about-us-image-prime.png" /></div>
+                    <div class="badge-round">
+                        <div class="round-text">CONTACT US • CONTACT US •</div><span class="badge-paw">🐾</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 about-copy"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon"
+                            fill="currentColor" focusable="false" stroke="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="2"></circle>
+                            <circle cx="13" cy="5" r="2"></circle>
+                            <circle cx="19" cy="7" r="2"></circle>
+                            <circle cx="4" cy="12" r="2"></circle>
+                            <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                        </svg> About Our Clinic</span>
+                    <h2>Trusted veterinary care for every beloved pet</h2>
+                    <p class="muted">We combine medical expertise with genuine love for animals to deliver the best
+                        possible care. You can trust us to treat your pets as if they were our own — with kindness,
+                        respect.
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-6">
+                            <div class="stat"><svg aria-hidden="true" class="vet-pictogram vet-icon-certificate"
+                                    fill="none" focusable="false" stroke="#07376E" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="44" rx="5" width="48" x="8" y="12"></rect>
+                                    <path d="M8 24h48M20 6v12M44 6v12"></path>
+                                    <path class="accent" d="m23 39 7 7 13-15"></path>
+                                </svg>
+                                <div><b>15+</b><small>Years of Trusted Service</small></div>
+                            </div>
+                            <div class="stat"><svg aria-hidden="true" class="vet-pictogram vet-icon-mouse" fill="none"
+                                    focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17" cy="17" r="9"></circle>
+                                    <circle cx="47" cy="17" r="9"></circle>
+                                    <circle class="accent" cx="17" cy="17" r="5"></circle>
+                                    <circle class="accent" cx="47" cy="17" r="5"></circle>
+                                    <path d="M12 30q20-18 40 0q10 23-20 28Q2 53 12 30Z"></path>
+                                    <circle cx="25" cy="39" r="2"></circle>
+                                    <circle cx="39" cy="39" r="2"></circle>
+                                    <path class="accent" d="m29 46 3 3 3-3-3-2Z"></path>
+                                    <path d="M32 49v4m0 0-7-2m7 2 7-2M16 46 6 43m42 3 10-3"></path>
+                                </svg>
+                                <div><b>5k+</b><small>Happy Pets Treated</small></div>
+                            </div>
+                            <div class="stat"><svg aria-hidden="true" class="vet-pictogram vet-icon-hospital"
+                                    fill="none" focusable="false" stroke="#07376E" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 28 32 9l26 19v30H6Z"></path>
+                                    <path d="M11 29v25h42V29M23 58V43q9-9 18 0v15"></path>
+                                    <g class="accent">
+                                        <circle cx="24" cy="31" r="2"></circle>
+                                        <circle cx="32" cy="26" r="2"></circle>
+                                        <circle cx="40" cy="31" r="2"></circle>
+                                        <path d="M25 38q7-10 14 0q1 5-7 3q-8 2-7-3Z"></path>
+                                    </g>
+                                </svg>
+                                <div><b>24/7</b><small>Emergency Care Available</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ph rounded-4" style="aspect-ratio:4/3"><img alt="Cat and dog"
+                                    src="images/ab-2.png" /></div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-4 mt-4 flex-wrap"><a class="btn btn-coral" href="#">More
+                            About Us <svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17 17 7M8 7h9v9"></path>
+                            </svg></a>
+                        <div class="d-flex align-items-center gap-2"><span class="ico-sq"><svg aria-hidden="true"
+                                    class="vet-pictogram vet-icon-phone" fill="none" focusable="false" stroke="#07376E"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 8 9 16q-3 22 16 39t30-1l-8-10-10 5q-15-7-19-19l5-10Z"></path>
+                                    <path class="accent" d="M38 12q14 3 16 17M39 21q7 2 8 9"></path>
+                                </svg></span>
+                            <div><small class="d-block">Call Us!</small><b>+01 123 456 789</b></div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-section bg-cream" id="services">
+        <div class="container text-center"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon"
+                    fill="currentColor" focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="2"></circle>
+                    <circle cx="13" cy="5" r="2"></circle>
+                    <circle cx="19" cy="7" r="2"></circle>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                </svg> Veterinary Services</span>
+            <h2>Comprehensive care services for<br />every beloved pet</h2>
+            <div class="row g-4 mt-2" id="services-grid">
+                <div class="col-6 col-lg-3">
+                    <div class="card-s">
+                        <div class="ph"><img alt="General Health Checkups" loading="lazy"
+                                src="images/service-image-1-prime.jpg" /></div>
+                        <h6>General Health Checkups</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s">
+                        <div class="ph"><img alt="Dental Care &amp; Cleaning" loading="lazy"
+                                src="images/service-image-2-prime.jpg" /></div>
+                        <h6>Dental Care &amp; Cleaning</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s">
+                        <div class="ph"><img alt="Nutritional Counseling" loading="lazy"
+                                src="images/service-image-3-prime.jpg" /></div>
+                        <h6>Nutritional Counseling</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s">
+                        <div class="ph"><img alt="Pet Boarding &amp; Daycare" loading="lazy"
+                                src="images/service-image-4-prime.jpg" /></div>
+                        <h6>Pet Boarding &amp; Daycare</h6>
+                    </div>
+                </div>
+            </div>
+            <p class="small mt-5 mb-1">Join our team and help weave innovation, quality, and success together worldwide.
+            <div class="rating"><b>4.9/5</b> <span class="stars"></span> <b>Our 4200 Review</b></div>
+            </p>
+        </div>
+    </section>
+    <section class="py-section text-center" id="why-choose-us">
+        <div class="container"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                    focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="2"></circle>
+                    <circle cx="13" cy="5" r="2"></circle>
+                    <circle cx="19" cy="7" r="2"></circle>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                </svg> Why Choose Us</span>
+            <h2>Where Veterinary <span class="accent-paw">♥</span> Expertise<br />Meets <span
+                    class="accent-paw">✦</span> Unconditional Love for<br />Animals <span class="accent-paw">🐾</span>
+            </h2>
+            <div class="why-cta-wrap"><a class="btn btn-coral my-3" href="#">Start Your Pet's Journey <svg
+                        aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17 17 7M8 7h9v9"></path>
+                    </svg></a></div>
+            <div class="ph mx-auto" style="width:100%;max-width:1600px"><img alt="Group of cats and dogs"
+                    src="images/why-cho.png" /></div>
+            <div class="chips mt-4"><span><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                        focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="2"></circle>
+                        <circle cx="13" cy="5" r="2"></circle>
+                        <circle cx="19" cy="7" r="2"></circle>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                    </svg> Veterinary Clinic</span><span><svg aria-hidden="true" class="vet-svg-icon"
+                        fill="currentColor" focusable="false" stroke="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="2"></circle>
+                        <circle cx="13" cy="5" r="2"></circle>
+                        <circle cx="19" cy="7" r="2"></circle>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                    </svg> Pet Wellness</span><span><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                        focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="2"></circle>
+                        <circle cx="13" cy="5" r="2"></circle>
+                        <circle cx="19" cy="7" r="2"></circle>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                    </svg> Pet Specialists</span><span><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                        focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="2"></circle>
+                        <circle cx="13" cy="5" r="2"></circle>
+                        <circle cx="19" cy="7" r="2"></circle>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                    </svg> Pet Nutrition</span><span><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                        focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="2"></circle>
+                        <circle cx="13" cy="5" r="2"></circle>
+                        <circle cx="19" cy="7" r="2"></circle>
+                        <circle cx="4" cy="12" r="2"></circle>
+                        <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                    </svg> Pet Essential</span></div>
+            <p class="small mt-3">Experience gentle, expert pet care designed for every stage of life. <a
+                    class="text-coral" href="#">Contact Our Team</a></p>
+        </div>
+    </section>
+    <section class="py-section bg-cream">
+        <div class="container text-center"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon"
+                    fill="currentColor" focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="2"></circle>
+                    <circle cx="13" cy="5" r="2"></circle>
+                    <circle cx="19" cy="7" r="2"></circle>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                </svg> Popular Products</span>
+            <h2>Popular Products for Happy, Healthy Pets</h2>
+            <div class="row g-4 mt-2" id="products-grid">
+                <div class="col-6 col-lg-3">
+                    <div class="card-s prod text-start">
+                        <div class="ph"><img alt="HealthyPaws Grain-Free" loading="lazy"
+                                src="images/product-image-1.jpg" /></div>
+                        <div class="px-2 pt-3 pb-2"><span class="stars"></span>
+                            <h6 class="px-0 pt-2 pb-1">HealthyPaws Grain-Free</h6>
+                            <div class="price"><b>$50.00</b><s>$75.00</s></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s prod text-start">
+                        <div class="ph"><img alt="Nutribite Premium Kibble" loading="lazy"
+                                src="images/product-image-2.jpg" /></div>
+                        <div class="px-2 pt-3 pb-2"><span class="stars"></span>
+                            <h6 class="px-0 pt-2 pb-1">Nutribite Premium Kibble</h6>
+                            <div class="price"><b>$80.00</b><s>$99.00</s></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s prod text-start">
+                        <div class="ph"><img alt="Puppy Grow Starter" loading="lazy" src="images/product-image-3.jpg" />
+                        </div>
+                        <div class="px-2 pt-3 pb-2"><span class="stars"></span>
+                            <h6 class="px-0 pt-2 pb-1">Puppy Grow Starter</h6>
+                            <div class="price"><b>$60.00</b><s>$80.00</s></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="card-s prod text-start">
+                        <div class="ph"><img alt="WhiskerFeast Gourmet" loading="lazy"
+                                src="images/product-image-4.jpg" /></div>
+                        <div class="px-2 pt-3 pb-2"><span class="stars"></span>
+                            <h6 class="px-0 pt-2 pb-1">WhiskerFeast Gourmet</h6>
+                            <div class="price"><b>$20.00</b><s>$35.00</s></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="small mt-5"><span class="pill">Free</span> Let's make something great work together. <a
+                    class="text-coral" href="#">Get Free Quote</a></div>
+        </div>
+    </section>
+    <section class="py-section reference-what">
+        <div class="container">
+            <div class="row g-4 g-xl-5 align-items-center what-layout">
+                <div class="col-lg-5 position-relative what-photo-col">
+                    <div class="ph rounded-4" style="aspect-ratio:1"><img alt="Vet examining a golden retriever"
+                            src="images/what-we-image-prime.jpg" /></div>
+                    <div class="float-card">
+                        <div class="avatars"><i></i><i></i><i></i></div><b>96% Client</b><small
+                            class="d-block">Satisfaction Rate</small>
+                    </div>
+                </div>
+                <div class="col-lg-7 what-content-col"><span class="eyebrow"><svg aria-hidden="true"
+                            class="vet-svg-icon" fill="currentColor" focusable="false" stroke="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="2"></circle>
+                            <circle cx="13" cy="5" r="2"></circle>
+                            <circle cx="19" cy="7" r="2"></circle>
+                            <circle cx="4" cy="12" r="2"></circle>
+                            <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                        </svg> What We Do</span>
+                    <h2>Dedicated to Keeping Your Pets Healthy and Happy</h2>
+                    <p class="muted">At our Veterinary &amp; Pet Care Clinic, we're passionate about ensuring every pet
+                        enjoys a long, healthy, and joyful life. Our dedicated team provides comprehensive medical care
+                        and preventive treatments.
+                    <div class="row g-3">
+                        <div class="col-md-7">
+                            <div class="do-item"><svg aria-hidden="true" class="vet-pictogram vet-icon-clipboard"
+                                    fill="none" focusable="false" stroke="#07376E" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="47" rx="4" width="40" x="12" y="11"></rect>
+                                    <rect height="12" rx="3" width="18" x="23" y="6"></rect>
+                                    <path class="accent" d="M19 37h9l4-9 5 19 5-10h5"></path>
+                                </svg>
+                                <div><b>Routine Health Checkups</b><small>Regular wellness exams to monitor your pet's
+                                        overall health and detect early signs.</small></div>
+                            </div>
+                            <div class="do-item"><svg aria-hidden="true" class="vet-pictogram vet-icon-hospital"
+                                    fill="none" focusable="false" stroke="#07376E" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 28 32 9l26 19v30H6Z"></path>
+                                    <path d="M11 29v25h42V29M23 58V43q9-9 18 0v15"></path>
+                                    <g class="accent">
+                                        <circle cx="24" cy="31" r="2"></circle>
+                                        <circle cx="32" cy="26" r="2"></circle>
+                                        <circle cx="40" cy="31" r="2"></circle>
+                                        <path d="M25 38q7-10 14 0q1 5-7 3q-8 2-7-3Z"></path>
+                                    </g>
+                                </svg>
+                                <div><b>Diagnostic Testing</b><small>Regular wellness exams to monitor your pet's
+                                        overall health and detect early signs.</small></div>
+                            </div>
+                            <div class="do-item"><svg aria-hidden="true" class="vet-pictogram vet-icon-food" fill="none"
+                                    focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 36q0 21 22 21t22-21Z M9 36h46"></path>
+                                    <path class="accent" d="M18 17q-6 9 2 14M32 9q-6 10 2 20M45 17q-6 9 2 14"></path>
+                                </svg>
+                                <div><b>Weight Management</b><small>Regular wellness exams to monitor your pet's overall
+                                        health and detect early signs.</small></div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="mini"><b>15+</b><small>Year of Trusted Service</small></div>
+                            <div class="mini"><b>24/7</b><small>Emergency Care Available</small></div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-section bg-dark-maroon text-white text-center">
+        <div class="container"><span class="eyebrow light"><svg aria-hidden="true" class="vet-svg-icon"
+                    fill="currentColor" focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="2"></circle>
+                    <circle cx="13" cy="5" r="2"></circle>
+                    <circle cx="19" cy="7" r="2"></circle>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                </svg> Our Benefits</span>
+            <h2>Exceptional benefits that keep<br />pets healthy always</h2>
+            <div class="row g-4 mt-2" id="benefits-grid">
+                <div class="col-md-6 col-lg-3">
+                    <div class="ben"><svg aria-hidden="true" class="vet-pictogram vet-icon-certificate" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect height="39" rx="2" width="46" x="9" y="8"></rect>
+                            <rect height="31" rx="1" width="38" x="13" y="12"></rect>
+                            <path d="M24 47v11l8-4 8 4V47"></path>
+                            <circle cx="32" cy="27" r="9"></circle>
+                            <g class="accent">
+                                <circle cx="28" cy="24" r="1.5"></circle>
+                                <circle cx="34" cy="24" r="1.5"></circle>
+                                <path d="M27 31q5-8 10 0q1 4-5 3q-6 1-5-3Z"></path>
+                            </g>
+                        </svg>
+                        <h6>Personalized Treatment</h6>
+                        <p>Customized treatment plans for every stage of your pet's health.
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Tailored Pet Treatment
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Individualized Pet Support</li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ben"><svg aria-hidden="true" class="vet-pictogram vet-icon-mouse" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="9"></circle>
+                            <circle cx="47" cy="17" r="9"></circle>
+                            <circle class="accent" cx="17" cy="17" r="5"></circle>
+                            <circle class="accent" cx="47" cy="17" r="5"></circle>
+                            <path d="M12 30q20-18 40 0q10 23-20 28Q2 53 12 30Z"></path>
+                            <circle cx="25" cy="39" r="2"></circle>
+                            <circle cx="39" cy="39" r="2"></circle>
+                            <path class="accent" d="m29 46 3 3 3-3-3-2Z"></path>
+                            <path d="M32 49v4m0 0-7-2m7 2 7-2M16 46 6 43m42 3 10-3"></path>
+                        </svg>
+                        <h6>Safe Environment</h6>
+                        <p>Customized treatment plans for every stage of your pet's health.
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Tailored Pet Treatment
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Individualized Pet Support</li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ben"><svg aria-hidden="true" class="vet-pictogram vet-icon-hospital" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 28 32 9l26 19v30H6Z"></path>
+                            <path d="M11 29v25h42V29M23 58V43q9-9 18 0v15"></path>
+                            <g class="accent">
+                                <circle cx="24" cy="31" r="2"></circle>
+                                <circle cx="32" cy="26" r="2"></circle>
+                                <circle cx="40" cy="31" r="2"></circle>
+                                <path d="M25 38q7-10 14 0q1 5-7 3q-8 2-7-3Z"></path>
+                            </g>
+                        </svg>
+                        <h6>Trusted Clinic</h6>
+                        <p>Customized treatment plans for every stage of your pet's health.
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Tailored Pet Treatment
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Individualized Pet Support</li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ben"><svg aria-hidden="true" class="vet-pictogram vet-icon-phone" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 8 9 16q-3 22 16 39t30-1l-8-10-10 5q-15-7-19-19l5-10Z"></path>
+                            <path class="accent" d="M38 12q14 3 16 17M39 21q7 2 8 9"></path>
+                        </svg>
+                        <h6>Emergency Support</h6>
+                        <p>Customized treatment plans for every stage of your pet's health.
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Tailored Pet Treatment
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Individualized Pet Support</li>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="small mt-5 mb-1 opacity-75">Join our team and help weave innovation, quality, and success together
+                worldwide.
+            <div class="rating"><b>4.9/5</b> <span class="stars"></span> <b>Our 4200 Review</b></div>
+            </p>
+        </div>
+    </section>
+    <section class="py-section text-center" id="pricing">
+        <div class="container"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                    focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="2"></circle>
+                    <circle cx="13" cy="5" r="2"></circle>
+                    <circle cx="19" cy="7" r="2"></circle>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                </svg> Our Pricing Plans</span>
+            <h2>Trusted pet products for health<br />and happiness</h2>
+            <div class="row g-4 mt-2 text-start" id="plans-grid">
+                <div class="col-md-4">
+                    <div class="plan"><svg aria-hidden="true" class="vet-pictogram vet-icon-heart" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 56 11 36C-3 22 14 3 32 20 50 3 67 22 53 36Z"></path>
+                            <path class="accent" d="M13 34h12l5-10 7 20 5-10h9"></path>
+                        </svg>
+                        <h6>Basic Care Plan</h6><small class="muted">Routine wellness and preventive care.</small>
+                        <div class="amt">$59<small>/Monthly</small></div>
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Priority appointment booking
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Specialized treatments &amp; follow-ups
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Advanced diagnostic (X-Ray / Ultrasound)</li>
+                            </li>
+                            </li>
+                        </ul><a class="btn btn-coral w-100" href="#">Get Started With Plan</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="plan"><svg aria-hidden="true" class="vet-pictogram vet-icon-certificate" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect height="39" rx="2" width="46" x="9" y="8"></rect>
+                            <rect height="31" rx="1" width="38" x="13" y="12"></rect>
+                            <path d="M24 47v11l8-4 8 4V47"></path>
+                            <circle cx="32" cy="27" r="9"></circle>
+                            <g class="accent">
+                                <circle cx="28" cy="24" r="1.5"></circle>
+                                <circle cx="34" cy="24" r="1.5"></circle>
+                                <path d="M27 31q5-8 10 0q1 4-5 3q-6 1-5-3Z"></path>
+                            </g>
+                        </svg>
+                        <h6>Standard Wellness Plan</h6><small class="muted">Routine wellness and preventive
+                            care.</small>
+                        <div class="amt">$69<small>/Monthly</small></div>
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Priority appointment booking
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Specialized treatments &amp; follow-ups
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Advanced diagnostic (X-Ray / Ultrasound)</li>
+                            </li>
+                            </li>
+                        </ul><a class="btn btn-coral w-100" href="#">Get Started With Plan</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="plan"><svg aria-hidden="true" class="vet-pictogram vet-icon-shield" fill="none"
+                            focusable="false" stroke="#07376E" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 5 55 14v17q0 20-23 29Q9 51 9 31V14Z"></path>
+                            <path class="accent" d="m21 33 8 8 15-17"></path>
+                        </svg>
+                        <h6>Premium Pet Health Plan</h6><small class="muted">Routine wellness and preventive
+                            care.</small>
+                        <div class="amt">$79<small>/Monthly</small></div>
+                        <ul>
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Priority appointment booking
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Specialized treatments &amp; follow-ups
+                            <li><svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                    <path d="m7 12 4 4 6-8"></path>
+                                </svg>Advanced diagnostic (X-Ray / Ultrasound)</li>
+                            </li>
+                            </li>
+                        </ul><a class="btn btn-coral w-100" href="#">Get Started With Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-4 flex-wrap small mt-4 muted"><span><svg aria-hidden="true"
+                        class="vet-svg-icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect height="16" rx="2" width="18" x="3" y="5"></rect>
+                        <path d="M7 2v6M17 2v6M3 10h18m5 6 2 2 4-5"></path>
+                    </svg> Get 30 day free trial</span><span><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                        focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect height="14" rx="2" width="20" x="2" y="5"></rect>
+                        <path d="M2 10h20M6 15h4"></path>
+                    </svg> No any hidden fees</span><span><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                        focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m8 8 8 8m0-8-8 8"></path>
+                    </svg> You can cancel anytime</span></div>
+        </div>
+    </section>
+    <section class="py-section bg-cream reference-testimonials">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon"
+                            fill="currentColor" focusable="false" stroke="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="2"></circle>
+                            <circle cx="13" cy="5" r="2"></circle>
+                            <circle cx="19" cy="7" r="2"></circle>
+                            <circle cx="4" cy="12" r="2"></circle>
+                            <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                        </svg> Testimonials</span>
+                    <h2>What our happy pet owners say</h2>
+                    <p class="muted">At our Veterinary &amp; Pet Care Clinic, we believe that every pet deserves
+                        exceptional care and every owner deserves peace of mind.
+                    <div class="row g-2 small mb-4">
+                        <div class="col-6"><svg aria-hidden="true" class="vet-svg-icon text-coral" fill="none"
+                                focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                <path d="m7 12 4 4 6-8"></path>
+                            </svg> Parasite prevention consultation</div>
+                        <div class="col-6"><svg aria-hidden="true" class="vet-svg-icon text-coral" fill="none"
+                                focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                <path d="m7 12 4 4 6-8"></path>
+                            </svg> Preventive Care Visit</div>
+                        <div class="col-6"><svg aria-hidden="true" class="vet-svg-icon text-coral" fill="none"
+                                focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                <path d="m7 12 4 4 6-8"></path>
+                            </svg> Pet Health Advisory</div>
+                        <div class="col-6"><svg aria-hidden="true" class="vet-svg-icon text-coral" fill="none"
+                                focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect height="20" rx="3" width="20" x="2" y="2"></rect>
+                                <path d="m7 12 4 4 6-8"></path>
+                            </svg> Pet Care Assessment</div>
+                    </div>
+                    <div class="white-box">
+                        <div><b>96% Client</b><small class="d-block">Satisfaction Rate</small><small class="muted">Our
+                                clients trust us because we care like family — always putting pets first.</small></div>
+                        <span class="badge-round sm"><svg aria-hidden="true" class="vet-svg-icon" fill="currentColor"
+                                focusable="false" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="2"></circle>
+                                <circle cx="13" cy="5" r="2"></circle>
+                                <circle cx="19" cy="7" r="2"></circle>
+                                <circle cx="4" cy="12" r="2"></circle>
+                                <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                            </svg></span>
+                    </div>
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="carousel slide carousel-fade" data-bs-interval="4500" data-bs-ride="carousel" id="tcar">
+                        <div class="carousel-inner" id="tslides">
+                            <div class="carousel-item active">
+                                <div class="tslide"><img alt="Sarah Johnson &amp; Bella" loading="lazy"
+                                        src="images/Testimonials-1.jpg" /><span class="count">01 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"I cannot express how grateful I am for the care and the incredible team
+                                            behind it. When our dog, Max, fell ill, we were terrified. The moment we
+                                            arrived, they put us at ease."
+                                        <div class="who"><span class="av">S</span>
+                                            <div><b>Sarah Johnson &amp; Bella</b><small
+                                                    class="d-block opacity-75">Marketing Executive</small></div><span
+                                                class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tslide"><img alt="Rohan Mehta &amp; Simba" loading="lazy"
+                                        src="images/Testimonials-2.jpg" /><span class="count">02 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"Simba hates vet visits, but here he walks in wagging his tail. The doctors
+                                            are patient, gentle and explain everything clearly."
+                                        <div class="who"><span class="av">R</span>
+                                            <div><b>Rohan Mehta &amp; Simba</b><small
+                                                    class="d-block opacity-75">Software Engineer</small></div><span
+                                                class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tslide"><img alt="Anita Sharma &amp; Coco" loading="lazy"
+                                        src="images/t-3.png" /><span class="count">03 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"Coco's dental cleaning was quick and stress-free. The follow-up reminders
+                                            and diet plan made a real difference."
+                                        <div class="who"><span class="av">A</span>
+                                            <div><b>Anita Sharma &amp; Coco</b><small class="d-block opacity-75">School
+                                                    Teacher</small></div><span class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tslide"><img alt="David Miller &amp; Rocky" loading="lazy"
+                                        src="images/te4.png" /><span class="count">04 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"Emergency at midnight and they picked up on the first call. Rocky was
+                                            treated right away and is back to playing."
+                                        <div class="who"><span class="av">D</span>
+                                            <div><b>David Miller &amp; Rocky</b><small
+                                                    class="d-block opacity-75">Photographer</small></div><span
+                                                class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tslide"><img alt="Priya Nair &amp; Luna" loading="lazy"
+                                        src="images/t-6.png" /><span class="count">05 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"The wellness plan is great value. Regular checkups mean we catch small
+                                            things early, and Luna is healthier than ever."
+                                        <div class="who"><span class="av">P</span>
+                                            <div><b>Priya Nair &amp; Luna</b><small class="d-block opacity-75">Graphic
+                                                    Designer</small></div><span class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tslide"><img alt="Karan Verma &amp; Milo" loading="lazy"
+                                        src="images/t7.png" /><span class="count">06 / 06</span>
+                                    <div class="quote"><svg aria-hidden="true" class="vet-svg-icon" fill="none"
+                                            focusable="false" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 6H4v8h5l-3 5M21 6h-6v8h5l-3 5"></path>
+                                        </svg>
+                                        <p>"Clean clinic, kind staff and honest advice. We never feel pushed into
+                                            anything. Milo's boarding stay was perfect."
+                                        <div class="who"><span class="av">K</span>
+                                            <div><b>Karan Verma &amp; Milo</b><small class="d-block opacity-75">Business
+                                                    Owner</small></div><span class="stars ms-auto"></span>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators" id="tdots"><button aria-current="true" aria-label="Review 1"
+                                class="active" data-bs-slide-to="0" data-bs-target="#tcar" type="button"></button>
+                            <button aria-label="Review 2" class="" data-bs-slide-to="1" data-bs-target="#tcar"
+                                type="button"></button> <button aria-label="Review 3" class="" data-bs-slide-to="2"
+                                data-bs-target="#tcar" type="button"></button> <button aria-label="Review 4" class=""
+                                data-bs-slide-to="3" data-bs-target="#tcar" type="button"></button> <button
+                                aria-label="Review 5" class="" data-bs-slide-to="4" data-bs-target="#tcar"
+                                type="button"></button> <button aria-label="Review 6" class="" data-bs-slide-to="5"
+                                data-bs-target="#tcar" type="button"></button></div><button aria-label="Previous"
+                            class="car-btn prev" data-bs-slide="prev" data-bs-target="#tcar" type="button"><svg
+                                aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m14 5-7 7 7 7M7 12h14"></path>
+                            </svg></button> <button aria-label="Next" class="car-btn next" data-bs-slide="next"
+                            data-bs-target="#tcar" type="button"><svg aria-hidden="true" class="vet-svg-icon"
+                                fill="none" focusable="false" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="m10 5 7 7-7 7M17 12H3"></path>
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-section" id="blog">
+        <div class="container">
+            <div class="row align-items-end g-4 mb-4">
+                <div class="col-lg-5"><span class="eyebrow"><svg aria-hidden="true" class="vet-svg-icon"
+                            fill="currentColor" focusable="false" stroke="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="2"></circle>
+                            <circle cx="13" cy="5" r="2"></circle>
+                            <circle cx="19" cy="7" r="2"></circle>
+                            <circle cx="4" cy="12" r="2"></circle>
+                            <path d="M8 13c2-3 6-3 8 0l3 4c2 4-1 6-5 4-2-1-4-1-6 0-4 2-7-1-5-4z"></path>
+                        </svg> Latest Blogs</span>
+                    <h2 class="mb-0">Helpful pet care tips, news &amp; expert advice</h2>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <p class="muted small">Stay informed with our latest articles covering health tips, training
+                        guidance, nutrition insights and everything your pet needs for a happy life.</p><a
+                        class="btn btn-coral" href="#">View All Blogs <svg aria-hidden="true" class="vet-svg-icon"
+                            fill="none" focusable="false" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17 17 7M8 7h9v9"></path>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="row g-4" id="blog-grid">
+                <div class="col-md-4">
+                    <article class="post">
+                        <div class="ph"><span class="cat">Nutrition</span><img
+                                alt="Mental Stimulation: Why Pet Needs More Than Just Exercise" loading="lazy"
+                                src="images/Post-1.jpg" /></div>
+                        <h6>Mental Stimulation: Why Pet Needs More Than Just Exercise</h6><a href="#">Read More <svg
+                                aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17 17 7M8 7h9v9"></path>
+                            </svg></a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="post">
+                        <div class="ph"><span class="cat">Veterinary Care</span><img
+                                alt="How to Create a Stress-Free Vet Experience for Anxious Dogs &amp; Cats"
+                                loading="lazy" src="images/Post-2.jpg" /></div>
+                        <h6>How to Create a Stress-Free Vet Experience for Anxious Dogs &amp; Cats</h6><a href="#">Read
+                            More <svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17 17 7M8 7h9v9"></path>
+                            </svg></a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="post">
+                        <div class="ph"><span class="cat">Pet Visits</span><img
+                                alt="Proven Ways to Reduce Stress in Pet Before and During Vet Visits" loading="lazy"
+                                src="images/Post-3.jpg" /></div>
+                        <h6>Proven Ways to Reduce Stress in Pet Before and During Vet Visits</h6><a href="#">Read More
+                            <svg aria-hidden="true" class="vet-svg-icon" fill="none" focusable="false"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17 17 7M8 7h9v9"></path>
+                            </svg></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="vv-site-footer" id="contact">
+        <div class="vv-footer-wrap">
+            <div class="vv-footer-top">
+                <div class="vv-footer-brand"><a aria-label="VedaVet home" class="vv-footer-logo" href="#"><img
+                            alt="VedaVet Veterinary Hospital logo" loading="lazy" src="images/logo.png" /></a>
+                    <p>Compassionate veterinary care, thoughtful guidance and everyday wellness for the pets who make
+                        life better.</p>
+                    <div class="vv-footer-pills"><span>♡ Compassionate Care</span><span>✚ Pet Wellness</span></div>
+                </div>
+                <div class="vv-footer-column">
+                    <h3>Quick Links</h3><a href="#">Home</a><a href="#">About Us</a><a href="#">Our Services</a><a
+                        href="#">Pet Shop</a><a href="#">Contact Us</a>
+                </div>
+                <div class="vv-footer-column">
+                    <h3>Our Services</h3><a href="#">Veterinary Consultation</a><a href="#">Vaccination &amp;
+                        Prevention</a><a href="#">Diagnostics &amp; Treatment</a><a href="#">Pet Grooming</a><a
+                        href="#">Pet Boarding</a>
+                </div>
+                <div class="vv-footer-column vv-footer-connect">
+                    <h3>Connect With Us</h3>
+                    <p>Care for every paw, at every stage of life.</p><a class="vv-footer-cta" href="#">Book an
+                        Appointment <span aria-hidden="true">↗</span></a>
+                    <div class="vv-footer-social"><a aria-label="Facebook" href="#">f</a><a aria-label="Instagram"
+                            href="#">◎</a><a aria-label="YouTube" href="#">▶</a></div>
+                </div>
+            </div>
+            <div class="vv-footer-bottom"><span>© 2026 VedaVet. All rights reserved.</span>
+                <nav aria-label="Footer legal links"><a href="#">Privacy Policy</a><a href="#">Terms &amp;
+                        Conditions</a><a href="#">Disclaimer</a><a href="#">Refund Policy</a></nav>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>document.addEventListener("scroll", function () { const e = document.getElementById("mainNav"); e && e.classList.toggle("scrolled", window.scrollY > 35) }, { passive: !0 });</script>
+    <link rel="stylesheet" href="/beta/node/vedavet-local.css" />
+    <script defer src="/beta/node/vedavet-local.js"></script>
+</body>
+
+</html>

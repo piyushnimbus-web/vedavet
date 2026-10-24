@@ -1,0 +1,1 @@
+import React from 'react';import {Link} from 'react-router-dom';export default function ServiceCard({service}){return <article className="vv-card"><img src={service.image} alt={service.name}/><div className="vv-card-body"><h3>{service.name}</h3><p>{service.description}</p><Link className="vv-link" to={'/services/'+service.slug}>View Details →</Link></div></article>}

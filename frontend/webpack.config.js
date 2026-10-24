@@ -1,5 +1,15 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+// output.clean wipes dist on every build; copy public/images back so the backend (which serves dist) has them.
+class CopyPublicImagesPlugin {
+  apply(compiler) {
+    compiler.hooks.afterEmit.tap("CopyPublicImagesPlugin", () => {
+      fs.cpSync(path.join(__dirname, "public/images"), path.join(compiler.outputPath, "images"), { recursive: true });
+    });
+  }
+}
 
 module.exports = {
   mode: "development",
@@ -17,6 +27,8 @@ module.exports = {
     open: "/beta/node/",
     hot: true,
     historyApiFallback: { index: "/beta/node/index.html" },
+    // Staff portal and API live on the backend; forward them so links work on the dev server too.
+    proxy: [{ context: ["/beta/node/staff", "/beta/node/api"], target: "http://localhost:4000" }],
     setupMiddlewares: (middlewares) => {
       middlewares.unshift({
         name: "redirect-root",
@@ -46,6 +58,7 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" })
+    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new CopyPublicImagesPlugin()
   ]
 };

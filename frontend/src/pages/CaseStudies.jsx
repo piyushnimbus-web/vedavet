@@ -1,0 +1,2 @@
+import React from 'react';import PageLayout from './PageLayout';
+export default function CaseStudies(){return <PageLayout title="Case Studies"><section className="vv-section-heading"><h2>Pet recovery journeys</h2><p>Verified case studies will be published here once owner consent and veterinary review are obtained.</p></section><a className="vv-btn" href="/beta/node/contact-us">Ask About Our Care →</a></PageLayout>;}

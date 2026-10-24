@@ -1,0 +1,1 @@
+import {apiRequest} from './client';export const submitAppointment=(data)=>apiRequest('/appointments',{method:'POST',body:data});

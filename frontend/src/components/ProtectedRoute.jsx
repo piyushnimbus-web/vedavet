@@ -1,0 +1,1 @@
+import React from 'react';export default function ProtectedRoute({children}){const token=sessionStorage.getItem('vedavet_token');if(!token){window.location.replace('/beta/node/login?next='+encodeURIComponent(location.pathname));return null;}return children;}

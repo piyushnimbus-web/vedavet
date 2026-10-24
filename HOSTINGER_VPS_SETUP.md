@@ -16,7 +16,7 @@ Use Docker Desktop, Node.js 20/22, and the setup commands in `README_FIRST.md` t
 2. Store project at `/srv/vedavet/` outside the web root. Never expose `.env` or database files through Nginx.
 3. Provision PostgreSQL roles/database; set `DATABASE_URL` and generate a strong unpredictable `JWT_SECRET` in `backend/.env`; use separate test credentials and no public demo passwords.
 4. Run `npm ci` (or `npm install` if lockfile absent), `npx prisma generate`, schema migrations, seed **test-only** records, and `npm run build` inside backend. Use a process manager to keep `node dist/main.js` running on `127.0.0.1:4000`.
-5. Run `npm install && npx webpack --mode production` inside frontend. Copy `frontend/dist` HTML/JS and `frontend/public/images`, `frontend/public/vedavet-local.js`, `frontend/public/vedavet-local.css`, `frontend/public/shop/` into the public static site root. Verify scripts/assets paths.
+5. Run `npm install && npx webpack --mode production` inside frontend. Copy `frontend/dist` (HTML/JS/assets) and `frontend/public/images` into the public static site root. The React app handles all routes (including `/shop`), so the server must fall back to `index.html` for unknown paths. Verify scripts/assets paths.
 6. Reverse proxy `/api/v1/` and `/staff/` to `http://127.0.0.1:4000` in Nginx, and serve the built React website at `/`. Backend CORS must be restricted to the approved demo domain.
 7. Configure HTTPS, private PDF storage, per-role permissions, backups, logging and monitoring before connecting a real client.
 

@@ -1,0 +1,2 @@
+import React from 'react';import PageLayout from './PageLayout';
+export default function Checkout(){return <PageLayout title="Checkout"><div className="vv-info"><h2>Checkout setup pending</h2><p>Secure checkout requires approved pricing, shipping rules, tax settings and payment gateway credentials. No payments are collected on this page.</p><a href="/beta/node/shop">Back to Shop</a></div></PageLayout>;}

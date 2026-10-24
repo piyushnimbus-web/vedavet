@@ -587,6 +587,27 @@ export class ApiController {
     await this.audit(u, "UPDATE", resource, id, { fields: Object.keys(data) });
     return v;
   }
+  @Delete("admin/products/:id") async removeProduct(
+    @Headers("authorization") a: string,
+    @Param("id") id: string,
+  ) {
+    const u = await this.permission(a, ["SHOP_MANAGER", "ADMIN"]);
+    const old = await this.db.product.findUnique({ where: { id } });
+    if (!old) throw new HttpException("Not found", 404);
+    // Products referenced by past orders are deactivated instead, so order history stays intact.
+    const ordered = await this.db.orderItem.count({ where: { productId: id } });
+    if (ordered) {
+      await this.db.product.update({ where: { id }, data: { active: false } });
+      await this.audit(u, "DEACTIVATE", "products", id);
+      return { removed: false, deactivated: true };
+    }
+    await this.db.$transaction([
+      this.db.stock.deleteMany({ where: { productId: id } }),
+      this.db.product.delete({ where: { id } }),
+    ]);
+    await this.audit(u, "DELETE", "products", id);
+    return { removed: true };
+  }
   @Post("admin/invoices/:id/payments") async payment(
     @Headers("authorization") a: string,
     @Param("id") id: string,

@@ -1,0 +1,1 @@
+export {apiRequest,API_BASE} from './client';export const getServices=()=>import('./client').then(({apiRequest})=>apiRequest('/services'));

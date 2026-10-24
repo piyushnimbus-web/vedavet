@@ -1,0 +1,5 @@
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {services} from './serviceData';
+import './ServicePremium.css';
+export default function Services(){return <main className="vv-service-page"><div className="vv-service-heading"><span>VEDAVET PET HOSPITAL</span><h1>Our Veterinary Services</h1><p><Link to="/">Home</Link> / Services</p></div><section className="vv-service-list"><div className="vv-service-intro"><span>COMPLETE PET HEALTHCARE</span><h2>Compassionate care for every stage of life</h2><p>From routine wellness to advanced veterinary support, explore our services and book a consultation with the team.</p></div><div className="vv-service-cards">{services.map(s=><Link className="vv-service-tile" key={s.slug} to={'/services/'+s.slug}><div><img src={s.image} alt={s.name} loading="lazy"/></div><h3>{s.name}</h3><p>{s.description}</p><span>Explore Service ↗</span></Link>)}</div></section><section className="vv-service-bottom"><h2>Give your pet the care they deserve</h2><p>Have questions about appointments, available services or specialists?</p><button type="button" data-book-appointment>Book an Appointment ↗</button></section></main>}

@@ -1,0 +1,142 @@
+.vv-footer {
+    background: linear-gradient(135deg, #062c5c 0%, #07376e 55%, #0a4a8d 100%);
+    color: #ffffff;
+    margin-top: 60px;
+    border-top: 5px solid #348f25;
+}
+
+.vv-footer-top {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 34px;
+}
+
+.vv-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.vv-footer-logo-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    /* background: rgba(255, 255, 255, 0.95); */
+    padding: 12px 16px;
+    border-radius: 14px;
+    /* box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16); */
+}
+
+.vv-footer-logo-box img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.vv-footer-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #dce8f4;
+    max-width: 420px;
+}
+
+.vv-footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: #ecf4fb;
+}
+
+.vv-footer-contact span strong {
+    color: #ffffff;
+}
+
+.vv-footer-col h4 {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.vv-footer-col h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 42px;
+    height: 3px;
+    border-radius: 10px;
+    background: #348f25;
+}
+
+.vv-footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vv-footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.vv-footer-col ul li a {
+    color: #dce8f4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.vv-footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.vv-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    text-align: center;
+    padding: 18px 15px 22px;
+}
+
+.vv-footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #d0deeb;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .vv-footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 640px) {
+    .vv-footer-top {
+        grid-template-columns: 1fr;
+        padding: 42px 18px 30px;
+    }
+    .vv-footer-logo-box img {
+        width: 155px;
+    }
+    .vv-footer-text {
+        font-size: 14px;
+    }
+    .vv-footer-col h4 {
+        font-size: 17px;
+    }
+}

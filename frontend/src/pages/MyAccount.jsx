@@ -1,0 +1,2 @@
+import React from 'react';import PageLayout from './PageLayout';
+export default function MyAccount(){return <PageLayout title="My Account"><div className="vv-info"><h2>Welcome to your account</h2><p>Appointments, patient profiles and order history will be available after the relevant backend services are configured.</p><button className="vv-btn" onClick={()=>{sessionStorage.removeItem('vedavet_token');location.href='/beta/node/beta/node/login'}}>Log Out</button></div></PageLayout>;}

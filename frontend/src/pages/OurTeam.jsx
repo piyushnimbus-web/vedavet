@@ -1,0 +1,2 @@
+import React from 'react';import PageLayout from './PageLayout';
+export default function OurTeam(){return <PageLayout title="Our Veterinary Team"><div className="vv-split"><img src="/beta/node/images/ab-2.png" alt="Veterinary team"/><div><h2>Meet the people who care</h2><p>Doctor names, credentials, specialisations, photographs and branch timings will be shown after verification and approval from VedaVet.</p><a className="vv-btn" href="/beta/node/appointment">Request Appointment →</a></div></div></PageLayout>;}

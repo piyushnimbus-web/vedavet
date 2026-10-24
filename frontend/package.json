@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
@@ -12,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
     "@babel/core": "^8.0.7",

@@ -1,0 +1,3 @@
+@import './styles/global.css';
+@import './styles/pages.css';
+/* Shared site theme. Home-specific styling remains in pages/HomeOriginal.css. */

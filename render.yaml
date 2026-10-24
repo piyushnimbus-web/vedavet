@@ -11,7 +11,7 @@ services:
     plan: free
     buildCommand: >-
       cd frontend && npm install --include=dev && npm run build &&
-      mkdir -p dist/images && cp -R public/images/. dist/images/ && cp -R public/shop dist/shop && cp public/vedavet-local.* dist/ &&
+      mkdir -p dist/images && cp -R public/images/. dist/images/ &&
       cd ../backend && npm install --include=dev && npx prisma generate && npm run build
     startCommand: cd backend && npx prisma db push && node dist/main.js
     healthCheckPath: /api/v1/health
